@@ -2,8 +2,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <!-- Favicons -->
-<link href="img/favicon.png" rel="icon">
-<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="{{ "img/favicon.png" | relURL}}" rel="icon">
+<link href="{{ "img/apple-touch-icon.png" | relURL}}" rel="apple-touch-icon">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
