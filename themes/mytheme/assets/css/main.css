@@ -2184,3 +2184,21 @@ section,
   padding-left: .45em;
   font-size: 15px
 }
+
+
+.image-container {
+  width: 100%;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.image-container figcaption {
+  font-style: italic;
+  text-align: center;
+}

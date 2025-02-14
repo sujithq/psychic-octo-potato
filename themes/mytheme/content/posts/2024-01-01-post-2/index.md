@@ -1,8 +1,8 @@
 +++
-title = 'Post 01'
-date = 2023-01-01T01:00:00-00:00
-draft = false
-tags = ['red']
+title = 'Post 02'
+date = 2024-01-01T01:00:00-00:00
+draft = true
+tags = ['green']
 layout = 'single'
 [params]
     cover = true

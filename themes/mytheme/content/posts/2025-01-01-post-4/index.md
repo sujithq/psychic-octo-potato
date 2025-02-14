@@ -1,7 +1,7 @@
 +++
-title = 'Post 03'
-date = 2025-01-01T01:00:00-00:00
-draft = false
+title = 'Post 04'
+date = 2025-01-02T01:00:00-00:00
+draft = true
 tags = ['blue']
 layout = 'single'
 [params]
