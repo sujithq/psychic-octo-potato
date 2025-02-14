@@ -96,7 +96,7 @@
                   {{ with $author }}
                     {{ with .Params.socials }}
                       {{ range . }}
-                        <a href="{{ .link }}"><i class="{{ .icon }}"></i></a>
+                        <a href="{{ .link }}" target="_blank"><i class="{{ .icon }}"></i></a>
                       {{ end }}
                     {{ else }}
                       <p>No social links available.</p>

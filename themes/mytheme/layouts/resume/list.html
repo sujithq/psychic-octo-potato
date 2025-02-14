@@ -115,16 +115,16 @@
                     <div class="timeline-content">
                         <h3 class="title">{{ .title }}</h3>
                         <h4 class="organization">
-                            <a href="{{ .organization_url }}">{{ .organization }}</a>
+                            <a href="{{ .organization_url }}" target="_blank">{{ .organization }}</a>
                         </h4>
                         <p class="date">
                           {{ time.Format "Jan 2, 2006" .date_start }} - {{ if .date_end }}{{ time.Format "Jan 2, 2006" .date_end }}{{ else }}Present{{ end }}
                         </p>
                         <p class="description">{{ .description }}</p>
                         <div class="links">
-                            <a class="btn" href="{{ .url }}">More Info</a>
+                            <a class="btn" href="{{ .url }}" target="_blank">More Info</a>
                             {{ if .certificate_url }}
-                                <a class="btn btn-cert" href="{{ .certificate_url }}">View Certificate</a>
+                                <a class="btn btn-cert" href="{{ .certificate_url }}" target="_blank">View Certificate</a>
                             {{ end }}
                         </div>
                     </div>
@@ -187,16 +187,16 @@
                   <div class="timeline-content">
                       <h3 class="title">{{ .title }}</h3>
                       <h4 class="organization">
-                          <a href="{{ .company_url }}">{{ .company }}</a>
+                          <a href="{{ .company_url }}" target="_blank">{{ .company }}</a>
                       </h4>
                       <p class="date">
                         {{ time.Format "Jan 2, 2006" .date_start }} - {{ if .date_end }}{{ time.Format "Jan 2, 2006" .date_end }}{{ else }}Present{{ end }}<span class="middot-divider">.</span>{{.location}}
                       </p>
                       <p class="description">{{ .description | markdownify }}</p>
                       <div class="links">
-                          <a class="btn" href="{{ .url }}">More Info</a>
+                          <a class="btn" href="{{ .url }}" target="_blank">More Info</a>
                           {{ if .certificate_url }}
-                              <a class="btn btn-cert" href="{{ .certificate_url }}">View Certificate</a>
+                              <a class="btn btn-cert" href="{{ .certificate_url }}" target="_blank">View Certificate</a>
                           {{ end }}
                       </div>
                   </div>
