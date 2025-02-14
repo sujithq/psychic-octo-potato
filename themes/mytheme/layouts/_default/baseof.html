@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="{{ if eq .Kind "home" }}index-page{{ else if eq .Kind "page" }}single-page{{ else if eq .Kind "section" }}list-page{{ else }}default-page{{ end }}">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    {{ partial "header.html" . }}
+  </header>
+  <main class="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer id="footer" class="footer dark-background">
+    {{ partial "footer.html" . }}
+  </footer>
+  <!-- Scroll Top -->
+  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+  <!-- Preloader -->
+  <!-- <div id="preloader"></div> -->
+  {{ partialCached "js.html" . }}
+  {{ partial "fonts.html" . }}
+</body>
+</html>

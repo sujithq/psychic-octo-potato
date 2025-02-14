@@ -1,0 +1,205 @@
+{{ define "main" }}
+
+<!-- Page Title -->
+<div class="page-title">
+  <div class="container d-lg-flex justify-content-between align-items-center">
+    <h1 class="mb-2 mb-lg-0">{{ .Title }}</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li class="current">{{ .Title }}</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-8">
+
+      <!-- Blog Details Section -->
+      <section id="blog-details" class="blog-details section">
+        <div class="container">
+
+          <article class="article">
+
+            {{ if .Params.cover }}
+            <div class="post-img">
+              <img src="cover.jpg" alt="" class="img-fluid">
+            </div>
+            {{ end }}
+
+                
+
+            <h2 class="title">{{ .Title }}</h2>
+
+            <div class="meta-top">
+              <ul>
+                <!-- <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li> -->
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">{{ time.Format "Jan 2, 2006" .Date }}</time></li>
+                <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li> -->
+              </ul>
+            </div><!-- End meta top -->
+
+            <div class="content">
+              {{ .Content }}
+            </div><!-- End post content -->
+
+            <div class="meta-bottom">
+              <!-- <i class="bi bi-folder"></i>
+              <ul class="cats">
+                <li><a href="#">Business</a></li>
+              </ul> -->
+
+              <i class="bi bi-tags"></i>
+              <ul class="tags">
+                {{ range .Params.tags }}
+                <li><a href="{{ printf "/tags/%s" . | relURL }}">{{ . }}</a></li>
+              {{ end }}
+              </ul>
+            </div><!-- End meta bottom -->
+
+          </article>
+
+        </div>
+      </section><!-- /Blog Details Section -->
+
+      {{ template "_internal/disqus.html" . }}
+
+    </div>
+
+    <div class="col-lg-4 sidebar">
+
+      <div class="widgets-container">
+
+        <!-- Blog Author Widget -->
+        <div class="blog-author-widget widget-item">
+
+          <div class="d-flex flex-column align-items-center">
+            <div class="d-flex align-items-center w-100">
+                {{ if .Params.author }}
+                <img src="{{ .Site.BaseURL }}authors/{{ .Params.author }}/avatar.png" class="rounded-circle flex-shrink-0" alt="">
+                {{ end }}
+              <div>
+
+                {{ with .Params.author }}
+                  {{ $author := site.GetPage (printf "authors/%s" .) }}
+                  {{ with $author }}
+                    <h4>{{ .Title }}</h4>
+                  {{ end }}
+                {{ end }}                 
+
+                {{ with .Params.author }}
+                  {{ $author := site.GetPage (printf "authors/%s" .) }}
+                  {{ with $author }}
+                    {{ with .Params.socials }}
+                      {{ range . }}
+                        <a href="{{ .link }}"><i class="{{ .icon }}"></i></a>
+                      {{ end }}
+                    {{ else }}
+                      <p>No social links available.</p>
+                    {{ end }}
+
+                  {{ end }}
+                {{ end }}
+
+                
+                <div class="social-links">
+                {{ with .Params.author }}
+                  {{ $author := site.GetPage (printf "authors/%s" .) }}
+                  {{ with $author }}
+                    {{ .Params.bio }}
+                  {{ end }}
+                {{ end }}
+                </div>
+              </div>
+            </div>
+
+            <p>
+              
+            </p>
+
+          </div>
+
+        </div>
+        <!--/Blog Author Widget -->
+
+        <!-- Search Widget -->
+        <!-- <div class="search-widget widget-item">
+
+          <h3 class="widget-title">Search</h3>
+          <form action="">
+            <input type="text">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+          </form>
+
+        </div> -->
+        <!--/Search Widget -->
+
+  <!-- {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }} -->        
+
+        <!-- Recent Posts Widget -->
+        <div class="recent-posts-widget widget-item">
+
+          <h3 class="widget-title">Recent Posts</h3>
+
+          {{ range first 5 (where site.RegularPages "Section" "posts") }}
+          <div class="post-item">
+            <!-- Fetch Cover Image -->
+            {{ $cover := "" }}
+            {{ if .Params.cover }}
+              {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
+            {{ else }}
+              {{ $cover = "img/default-cover.jpg" }}
+            {{ end }}
+
+            <img src="{{ $cover }}" alt="Cover Image" class="flex-shrink-0">
+
+            <div>
+              <!-- Fetch Title and Link -->
+              <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+
+              <!-- Fetch Date -->
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+            </div>
+          </div><!-- End recent post item-->
+        {{ end }}
+        </div><!--/Recent Posts Widget -->
+
+        <!-- Tags Widget -->
+        <div class="tags-widget widget-item">
+
+          <h3 class="widget-title">Tags</h3>
+
+
+
+          <ul>
+            {{ $tags := site.GetPage "/tags" }}
+            {{ range $tags.Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+              {{ end }}
+          </ul>
+
+        </div><!--/Tags Widget -->
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <h1>{{ .Title }}</h1>
+
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date | time.Format ":date_long" }}
+  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+  {{ .Content }}
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }} -->
+  
+{{ end }}

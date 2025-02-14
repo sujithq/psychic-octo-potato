@@ -1,0 +1,31 @@
+name = 'SujithQ'
+license = 'MIT'
+licenselink = 'https://github.com/sujithq/sujithq-hugo-theme/LICENSE'
+description = 'SujithQ Blog Theme'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/sujithq/sujithq-hugo-theme'
+
+# If you have a running demo of the theme
+demosite = 'https://sujithq.github.io/repo'
+
+# Taxonomy terms
+tags = ['blog', 'cv']
+features = ['some', 'awesome', 'features']
+
+# # If the theme has multiple authors
+# authors = [
+#   {name = 'Name of author', homepage = 'Website of author'},
+#   {name = 'Name of author', homepage = 'Website of author'}
+# ]
+
+# If the theme has a single author
+[author]
+  name = 'Sujith Quintelier'
+  homepage = 'https://sujithq.github.io'
+
+# # If porting an existing theme
+# [original]
+#   author = 'Name of original author'
+#   homepage = 'Website of original author'
+#   repo = 'https://github.com/owner/repo'

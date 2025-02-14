@@ -1,0 +1,5 @@
+<div class="header-social-links">
+    {{- range .Site.Params.socials }}
+      <a href="{{ .url }}" class="{{ .name }}"><i class="{{ .icon }}"></i></a>
+    {{- end }}
+</div>

@@ -1,0 +1,4 @@
+baseURL = '/psychic-octo-potato'
+languageCode = 'en-us'
+title = 'Sujith Quintelier'
+theme = 'mytheme'
