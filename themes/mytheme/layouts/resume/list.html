@@ -94,6 +94,51 @@
   </div>
 </section>
 
+<section id="experience-category" class="experience-category section">
+  <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="">
+          <div class="container aos-init aos-animate" data-aos="fade-up">
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <div class="d-flex flex-column align-items-center">
+              <h4>Experience</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+        {{ with .Site.GetPage "section" "resume" }}
+          {{ range .Pages }}
+            {{ if eq .Title "Experiences" }}
+                {{ range sort .Params.item "date_start" "desc"}}
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                      <h3 class="title">{{ .title }}</h3>
+                      <h4 class="organization">
+                          <a href="{{ .company_url }}" target="_blank">{{ .company }}</a>
+                      </h4>
+                      <p class="date">
+                        {{ time.Format "Jan 2, 2006" .date_start }} - {{ if .date_end }}{{ time.Format "Jan 2, 2006" .date_end }}{{ else }}Present{{ end }}<span class="middot-divider">.</span>{{.location}}
+                      </p>
+                      <p class="description">{{ .description | markdownify }}</p>
+                      <div class="links">
+                          <a class="btn" href="{{ .url }}" target="_blank">More Info</a>
+                          {{ if .certificate_url }}
+                              <a class="btn btn-cert" href="{{ .certificate_url }}" target="_blank">View Certificate</a>
+                          {{ end }}
+                      </div>
+                  </div>
+                </div>
+                {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+    </div>
+  </div>
+</section>
+
 <section id="accomplishments-category" class="accomplishments-category section">
   <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
     <div class="row g-5">
@@ -157,51 +202,6 @@
           {{ range .Pages }}
             {{ if eq .Title "Badges" }}
                 {{ .Content }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-    </div>
-  </div>
-</section>
-
-<section id="experience-category" class="experience-category section">
-  <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-5">
-      <div class="col-lg-4">
-        <div class="">
-          <div class="container aos-init aos-animate" data-aos="fade-up">
-          </div>
-          <div class="d-flex flex-column align-items-center">
-            <div class="d-flex flex-column align-items-center">
-              <h4>Experience</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg">
-        {{ with .Site.GetPage "section" "resume" }}
-          {{ range .Pages }}
-            {{ if eq .Title "Experiences" }}
-                {{ range sort .Params.item "date_start" "desc"}}
-                <div class="timeline-item">
-                  <div class="timeline-content">
-                      <h3 class="title">{{ .title }}</h3>
-                      <h4 class="organization">
-                          <a href="{{ .company_url }}" target="_blank">{{ .company }}</a>
-                      </h4>
-                      <p class="date">
-                        {{ time.Format "Jan 2, 2006" .date_start }} - {{ if .date_end }}{{ time.Format "Jan 2, 2006" .date_end }}{{ else }}Present{{ end }}<span class="middot-divider">.</span>{{.location}}
-                      </p>
-                      <p class="description">{{ .description | markdownify }}</p>
-                      <div class="links">
-                          <a class="btn" href="{{ .url }}" target="_blank">More Info</a>
-                          {{ if .certificate_url }}
-                              <a class="btn btn-cert" href="{{ .certificate_url }}" target="_blank">View Certificate</a>
-                          {{ end }}
-                      </div>
-                  </div>
-                </div>
-                {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
