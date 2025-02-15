@@ -29,3 +29,8 @@ features = ['some', 'awesome', 'features']
 #   author = 'Name of original author'
 #   homepage = 'Website of original author'
 #   repo = 'https://github.com/owner/repo'
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"

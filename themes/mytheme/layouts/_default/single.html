@@ -4,14 +4,15 @@
 <div class="page-title">
   <div class="container d-lg-flex justify-content-between align-items-center">
     <h1 class="mb-2 mb-lg-0">{{ .Title }}</h1>
-    <nav class="breadcrumbs">
+    <!-- <nav class="breadcrumbs">
       <ol>
         <li><a href="/">Home</a></li>
         <li class="current">{{ .Title }}</li>
       </ol>
-    </nav>
+    </nav> -->
   </div>
-</div><!-- End Page Title -->
+</div>
+<!-- End Page Title -->
 
 
 <div class="container">
@@ -33,7 +34,7 @@
 
                 
 
-            <h2 class="title">{{ .Title }}</h2>
+            <!-- <h2 class="title">{{ .Title }}</h2> -->
 
             <div class="meta-top">
               <ul>
@@ -48,10 +49,20 @@
             </div><!-- End post content -->
 
             <div class="meta-bottom">
-              <!-- <i class="bi bi-folder"></i>
+
+              <i class="bi bi-stack"></i>
               <ul class="cats">
-                <li><a href="#">Business</a></li>
-              </ul> -->
+                {{ range .Params.series }}
+                <li><a href="{{ printf "/series/%s" . | relURL }}">{{ . }}</a></li>
+              {{ end }}
+              </ul>
+
+              <i class="bi bi-folder"></i>
+              <ul class="cats">
+                {{ range .Params.categories }}
+                <li><a href="{{ printf "/categories/%s" . | relURL }}">{{ . }}</a></li>
+              {{ end }}
+              </ul>
 
               <i class="bi bi-tags"></i>
               <ul class="tags">
@@ -178,16 +189,41 @@
 
           <h3 class="widget-title">Tags</h3>
 
-
-
           <ul>
             {{ $tags := site.GetPage "/tags" }}
             {{ range $tags.Pages }}
                 <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
               {{ end }}
           </ul>
-
         </div><!--/Tags Widget -->
+
+        <!-- Categories Widget -->
+        <div class="tags-widget widget-item">
+
+          <h3 class="widget-title">Categories</h3>
+
+          <ul>
+            {{ $cats := site.GetPage "/categories" }}
+            {{ range $cats.Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+              {{ end }}
+          </ul>
+
+        </div><!--/Categories Widget -->
+
+        <!-- Series Widget -->
+        <div class="tags-widget widget-item">
+
+          <h3 class="widget-title">Series</h3>
+
+          <ul>
+            {{ $series := site.GetPage "/series" }}
+            {{ range $series.Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+              {{ end }}
+          </ul>
+
+        </div><!--/Series Widget -->
       </div>
     </div>
   </div>
