@@ -1,8 +1,30 @@
 {{ define "main" }}
+<div class="recent-posts-widget widget-item">
+
   <h1>{{ .Title }}</h1>
-  <ul>
     {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      <!-- <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li> -->
+      <div class="post-item">
+        <!-- Fetch Cover Image -->
+        {{ $cover := "" }}
+        {{ if .Params.cover }}
+          {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
+        {{ else }}
+          {{ $cover = "img/default-cover.jpg" }}
+        {{ end }}
+    
+        <img src="{{ $cover }}" alt="Cover Image" class="flex-shrink-0">
+    
+        <div>
+          <!-- Fetch Title and Link -->
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+    
+          <!-- Fetch Date -->
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+        </div>
+      </div><!-- End recent post item-->
     {{ end }}
-  </ul>
+  </div>
 {{ end }}

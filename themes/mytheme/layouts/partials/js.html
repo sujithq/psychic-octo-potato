@@ -12,7 +12,7 @@
     {{- end }}
   {{- end }}
 {{- end }}
-{{- with resources.Get "vendor/php-email-form/validate.js" }}
+<!-- {{- with resources.Get "vendor/php-email-form/validate.js" }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
       <script src="{{ .RelPermalink }}"></script>
@@ -23,8 +23,8 @@
       <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
     {{- end }}
   {{- end }}
-{{- end }}
-{{- with resources.Get "vendor/aos/aos.js" }}
+{{- end }} -->
+<!-- {{- with resources.Get "vendor/aos/aos.js" }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
       <script src="{{ .RelPermalink }}"></script>
@@ -35,7 +35,22 @@
       <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
     {{- end }}
   {{- end }}
-{{- end }}
+{{- end }} -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Initialize AOS after loading -->
+<script>
+  function aosInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  }
+  window.addEventListener('DOMContentLoaded', aosInit);
+</script>
+
+
 {{- with resources.Get "vendor/swiper/swiper-bundle.min.js" }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
