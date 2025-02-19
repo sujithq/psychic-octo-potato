@@ -1,23 +1,24 @@
 {{ define "main" }}
 
-<!-- Page Title -->
-<div class="page-title">
-  <div class="container d-lg-flex justify-content-between align-items-center">
-    <h1 class="mb-2 mb-lg-0">{{ .Title }}</h1>
-    <!-- <nav class="breadcrumbs">
-      <ol>
-        <li><a href="/">Home</a></li>
-        <li class="current">{{ .Title }}</li>
-      </ol>
-    </nav> -->
-  </div>
-</div>
-<!-- End Page Title -->
+
 
 
 <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
   <div class="row">
     <div class="col-lg-8">
+      <!-- Page Title -->
+      <div class="page-title">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+          <h1 class="mb-2 mb-lg-0">{{ .Title }}</h1>
+          <!-- <nav class="breadcrumbs">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li class="current">{{ .Title }}</li>
+            </ol>
+          </nav> -->
+        </div>
+      </div>
+      <!-- End Page Title -->
       {{ partial "blog-detail.html" (dict "page" .) }}
       {{ template "_internal/disqus.html" . }}
     </div>
