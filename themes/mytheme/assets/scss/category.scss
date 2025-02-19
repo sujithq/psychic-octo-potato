@@ -1,0 +1,136 @@
+// 'trending'
+@mixin category($name){
+  /*--------------------------------------------------------------
+  # #{$name} Category Section
+  --------------------------------------------------------------*/
+  .#{$name}-category .post-entry {
+    margin-bottom: 30px;
+  }
+  
+  .#{$name}-category .post-entry img {
+    margin-bottom: 30px;
+  }
+  
+  .#{$name}-category .post-entry h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .#{$name}-category .post-entry h2 a {
+    color: var(--heading-color);
+  }
+  
+  .#{$name}-category .post-entry h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  .#{$name}-category .post-entry.lg h2 {
+    font-size: 40px;
+    line-height: 1;
+  }
+  
+  .#{$name}-category .post-meta {
+    font-size: 11px;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    margin-bottom: 10px;
+  }
+  
+  .#{$name}-category .custom-border {
+    border-color: color-mix(in srgb, var(--default-color), transparent 90%) !important;
+  }
+  
+  @media (max-width: 768px) {
+    .#{$name}-category .custom-border {
+      border: none !important;
+    }
+  }
+  
+  .#{$name}-category .author .photo {
+    margin-right: 10px;
+  }
+  
+  .#{$name}-category .author .photo img {
+    width: 40px;
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+  
+  .#{$name}-category .author .name h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: var(--default-font);
+  }
+  
+  .#{$name}-category .#{$name} {
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .#{$name}-category .#{$name}>h3 {
+    color: var(--default-color);
+    padding: 20px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li a {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li a .number {
+    position: absolute;
+    z-index: 1;
+    font-size: 5rem;
+    left: -10px;
+    top: -20px;
+    font-weight: 700;
+    font-family: var(--heading-font);
+    color: color-mix(in srgb, var(--default-color), transparent 95%);
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li a h3 {
+    font-size: 18px;
+    color: var(--default-color);
+    transition: 0.3s;
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li a .author {
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    font-weight: 500;
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li a:hover h3 {
+    color: var(--default-color);
+    text-decoration: underline;
+  }
+  
+  .#{$name}-category .#{$name} .#{$name}-post li:last-child a {
+    border-bottom: none;
+  }
+}
+
+@include category("trending");
+@include category("culture");
+@include category("business");
+@include category("lifestyle");

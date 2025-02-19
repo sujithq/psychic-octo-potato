@@ -18,7 +18,7 @@ layout = 'accomplishment'
 
 [[item]]
   organization = "Microsoft"
-  organization_url = "https://www.Microsoft.com"
+  organization_url = "https://www.microsoft.com"
   title = "Microsoft Certified: Azure AI Fundamentals"
   url = "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
   certificate_url = ""
@@ -30,7 +30,7 @@ layout = 'accomplishment'
 
 [[item]]
   organization = "Microsoft"
-  organization_url = "https://www.Microsoft.com"
+  organization_url = "https://www.microsoft.com"
   title = "Microsoft Certified: Azure Fundamentals"
   url = "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals"
   certificate_url = ""
@@ -42,7 +42,7 @@ layout = 'accomplishment'
 
 [[item]]
   organization = "GitHub"
-  organization_url = "https://www.github.com"
+  organization_url = "https://github.com"
   title = "GitHub Sales Professional"
   url = ""
   certificate_url = "https://github.com/sujithq/sujithq/raw/master/assets/github/GHSP.pdf"
@@ -175,7 +175,7 @@ layout = 'accomplishment'
 
 [[item]]
   organization = "GitHub"
-  organization_url = "https://www.github.com"
+  organization_url = "https://github.com"
   title = "GitHub Certified Partner: GitHub Actions"
   url = "https://examregistration.github.com/certification/ACTIONS/"
   certificate_url = "https://www.credly.com/badges/6ae13777-6422-4083-b469-b46d5cf16a33"
@@ -187,7 +187,7 @@ layout = 'accomplishment'
 
 [[item]]
   organization = "GitHub"
-  organization_url = "https://www.github.com"
+  organization_url = "https://github.com"
   title = "GitHub Certified Partner: GitHub Admin"
   url = "https://examregistration.github.com/certification/ADMIN/"
   certificate_url = "https://www.credly.com/badges/ff8dd9da-f68f-4529-802f-3ae1ce302ce4"
@@ -199,7 +199,7 @@ layout = 'accomplishment'
 
   [[item]]
   organization = "GitHub"
-  organization_url = "https://www.github.com"
+  organization_url = "https://github.com"
   title = "GitHub Certified Partner: GitHub Advanced Security"
   url = "https://examregistration.github.com/certification/GHAS/"
   certificate_url = "https://www.credly.com/badges/4f384409-135f-49a6-8455-f2c3e8511a0b"
@@ -211,7 +211,7 @@ layout = 'accomplishment'
 
 [[item]]
   organization = "GitHub"
-  organization_url = "https://www.github.com"
+  organization_url = "https://github.com"
   title = "GitHub Certified Partner: GitHub Foundations"
   url = "https://examregistration.github.com/certification/GHF/"
   certificate_url = "https://www.credly.com/badges/f2af80ea-f871-40e7-8ea7-ac135bf9a961"
@@ -222,7 +222,7 @@ layout = 'accomplishment'
   """
 [[item]]
   organization = "GitHub"
-  organization_url = "https://www.github.com"
+  organization_url = "https://github.com"
   title = "GitHub Sales Professional: Sales Validation"
   url = ""
   certificate_url = "https://www.credly.com/badges/a61c8cb7-0861-4a8e-9b56-5b3a06c86c8e"

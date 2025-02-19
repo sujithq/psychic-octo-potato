@@ -1,3 +1,22 @@
-baseURL = '/'
-languageCode = 'en-US'
-title = 'My New Hugo Site'
+# baseURL = 'http://localhost:1313/'
+# languageCode = 'en-us'
+# title = 'Sujith Quintelier'
+# theme = 'mytheme'
+
+[params]
+  dateFormat = "Jan 2, 2006"
+
+[[menus.main]]
+  name = 'Blog'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = 'Resume'
+  pageRef = '/resume'
+  weight = 20
+
+[taxonomies]
+  categories = "categories"
+  tags = "tags"
+  series = "series"

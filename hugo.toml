@@ -1,14 +1,16 @@
-baseURL = 'http://localhost:1313/'
-languageCode = 'en-us'
-title = 'Sujith Quintelier'
-theme = 'mytheme'
+# baseURL = 'http://localhost:1313/'
+# languageCode = 'en-us'
+# title = 'Sujith Quintelier'
+# theme = 'mytheme'
 
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+# [module]
+#   [module.hugoVersion]
+#     extended = false
+#     min = "0.116.0"
 
 [params]
+#   dateFormat = "Jan 2, 2006"
+# 
   [[params.socials]]
     name = "twitter"
     url = "https://x.com/SujithQ"
@@ -28,22 +30,23 @@ theme = 'mytheme'
     name = "linkedin"
     url = "https://www.linkedin.com/in/sujithquintelier/"
     icon = "bi bi-linkedin"
-
+ 
 [services]
-[services.disqus]
-  shortname = 'sujithq'
+    [services.disqus]
+    shortname = 'sujithq'
+# 
+# [[menus.main]]
+# name = 'Blog'
+# pageRef = '/'
+# weight = 10
+# 
+# [[menus.main]]
+# name = 'Resume'
+# pageRef = '/resume'
+# weight = 20
+# 
+# [taxonomies]
+#   category = "categories"
+#   tag = "tags"
+#   series = "series"
 
-[[menus.main]]
-name = 'Blog'
-pageRef = '/'
-weight = 10
-
-[[menus.main]]
-name = 'Resume'
-pageRef = '/resume'
-weight = 20
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"

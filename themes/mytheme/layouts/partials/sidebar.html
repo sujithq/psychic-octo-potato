@@ -1,0 +1,145 @@
+<div class="widgets-container">
+
+    <!-- Blog Author Widget -->
+    <div class="blog-author-widget widget-item">
+
+      <div class="d-flex flex-column align-items-center">
+        <div class="d-flex align-items-center w-100">
+            {{ if .Params.author }}
+            <img src="{{ .Site.BaseURL }}authors/{{ .Params.author }}/avatar.png" class="rounded-circle flex-shrink-0" alt="">
+            {{ end }}
+          <div>
+
+            {{ with .Params.author }}
+              {{ $author := site.GetPage (printf "authors/%s" .) }}
+              {{ with $author }}
+                <h4>{{ .Title }}</h4>
+              {{ end }}
+            {{ end }}                 
+            
+            <div class="social-links">
+            {{ with .Params.author }}
+              {{ $author := site.GetPage (printf "authors/%s" .) }}
+              {{ with $author }}
+                {{ .Params.bio }}
+              {{ end }}
+            {{ end }}
+            </div>
+          </div>
+        </div>
+
+        <p>
+          
+        </p>
+
+      </div>
+
+    </div>
+    <!--/Blog Author Widget -->
+
+    <!-- Search Widget -->
+    <div class="search-widget widget-item">
+      {{ partial "search.html" . }}
+    </div>
+    <!--/Search Widget -->
+
+<!-- {{ range site.RegularPages }}
+<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+{{ .Summary }}
+{{ end }} -->        
+
+    <!-- Recent Posts Widget -->
+    <div class="recent-posts-widget widget-item">
+
+      <h3 class="widget-title">Recent Posts</h3>
+
+      {{ range first 5 (where site.RegularPages "Section" "posts") }}
+      <div class="post-item">
+        <!-- Fetch Cover Image -->
+        {{ $cover := "" }}
+        {{ if .Params.cover }}
+          {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
+        {{ else }}
+          {{ $cover = "img/default-cover.jpg" }}
+        {{ end }}
+
+        <img src="{{ $cover }}" alt="Cover Image" class="flex-shrink-0">
+
+        <div>
+          <!-- Fetch Title and Link -->
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+
+          <!-- Fetch Date -->
+          <time datetime="{{ .Date.Format .Site.Params.dateFormat }}">
+            {{ .Date.Format .Site.Params.dateFormat }}
+          </time>
+        </div>
+      </div><!-- End recent post item-->
+    {{ end }}
+    </div><!--/Recent Posts Widget -->
+
+
+    {{ range $taxName, $termsMap := .Site.Taxonomies }}
+    {{ $taxonomyPage := site.GetPage (printf "/%s" $taxName) }}
+      <div class="{{$taxName}}-widget widget-item">
+        <h3 class="widget-title">
+          {{ with $taxonomyPage }}
+            <a href="{{ .RelPermalink }}">{{ $taxName }}</a>
+          {{ else }}
+            {{ $taxName }}
+          {{ end }}
+        </h3>
+        <ul>
+          {{ range $term, $pages := $termsMap }}
+            {{ with site.GetPage (printf "/%s/%s" $taxName $term) }}
+              <li><a href="{{ .RelPermalink }}">{{ $term }} ({{ len $pages }})</a></li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+
+    <!-- Tags Widget -->
+    <!-- <div class="tags-widget widget-item">
+
+      <h3 class="widget-title">Tags</h3>
+
+      <ul>
+        {{ $tags := site.GetPage "/tags" }}
+        {{ range $tags.Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+      </ul>
+    </div> -->
+    <!--/Tags Widget -->
+
+    <!-- Categories Widget -->
+    <!-- <div class="tags-widget widget-item">
+
+      <h3 class="widget-title">Categories</h3>
+
+      <ul>
+        {{ $cats := site.GetPage "/categories" }}
+        {{ range $cats.Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+      </ul>
+
+    </div> -->
+    <!--/Categories Widget -->
+
+    <!-- Series Widget -->
+    <!-- <div class="tags-widget widget-item">
+
+      <h3 class="widget-title">Series</h3>
+
+      <ul>
+        {{ $series := site.GetPage "/series" }}
+        {{ range $series.Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+      </ul>
+
+    </div> -->
+    <!--/Series Widget -->
+  </div>

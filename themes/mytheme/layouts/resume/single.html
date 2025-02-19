@@ -1,7 +1,8 @@
 {{ define "main" }}
+{{ $global := . }}
 <section id="bio-category" class="bio-category section">
   <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-5">
+    <div class="row">
       <div class="col-lg-4">
         <div class="blog-author-widget widget-item">
           <div class="d-flex flex-column align-items-center">
@@ -43,52 +44,56 @@
         </div>
       </div>
       <div class="col-lg">
-        <div>
-          {{ with .Params.author }}
+        <div class="timeline-item">
+          <div class="timeline-content">
+            {{ with .Params.author }}
             {{ $author := site.GetPage (printf "authors/%s" .) }}
             {{ with $author }}
               {{ .Content }}
             {{ end }}
           {{ end }}
+          </div>
         </div>
-        <div class="row g-6">
-          <div class="col-lg-6">
-            <h4>Interests</h4>
-            <ul>
-              {{ with .Params.author }}
-              {{ $author := site.GetPage (printf "authors/%s" .) }}
-                {{ with $author }}
-                  {{ with $author.Params.interests }}
-                    {{ range . }}
-                    <li>{{ . }}</li>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="col-lg-6">
+                <h4>Interests</h4>
+                <ul>
+                  {{ with .Params.author }}
+                  {{ $author := site.GetPage (printf "authors/%s" .) }}
+                    {{ with $author }}
+                      {{ with $author.Params.interests }}
+                        {{ range . }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                      {{ end }}
                     {{ end }}
                   {{ end }}
-                {{ end }}
-              {{ end }}
-            </ul>
-          </div>
-          <div class="col-lg">
-            <h4>Education</h4>
-            <ul class="list-unstyled">
-              {{ with .Params.author }}
-              {{ $author := site.GetPage (printf "authors/%s" .) }}
-                  {{ with $author }}
-                      {{ with $author.Params.education }}
-                          {{ range .courses }}
-                          <li class="d-flex align-items-start mb-3">
-                              <i class="bi bi-mortarboard me-2 fs-4"></i>
-                              <div>
-                                  <p class="course fw-bold m-0">{{ .course }}, {{ .year }}</p>
-                                  <p class="institution text-muted m-0">{{ .institution }}</p>
-                              </div>
-                          </li>
+                </ul>
+              </div>
+              <div class="col-lg">
+                <h4>Education</h4>
+                <ul class="list-unstyled">
+                  {{ with .Params.author }}
+                  {{ $author := site.GetPage (printf "authors/%s" .) }}
+                      {{ with $author }}
+                          {{ with $author.Params.education }}
+                              {{ range .courses }}
+                              <li class="d-flex align-items-start mb-3">
+                                  <i class="bi bi-mortarboard me-2 fs-4"></i>
+                                  <div>
+                                      <p class="course fw-bold m-0">{{ .course }}, {{ .year }}</p>
+                                      <p class="institution text-muted m-0">{{ .institution }}</p>
+                                  </div>
+                              </li>
+                              {{ end }}
                           {{ end }}
                       {{ end }}
                   {{ end }}
-              {{ end }}
-          </ul>
+              </ul>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -101,7 +106,7 @@
 
     <div class="row">
 
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-4">
         <div class="">
           <div class="container aos-init aos-animate" data-aos="fade-up">
           </div>
@@ -113,41 +118,41 @@
         </div>
       </div>
 
-      <div class="col-lg" data-aos="fade-up" data-aos-delay="200">
-        {{ with .Site.GetPage "section" "resume" }}
-          {{ range .Pages }}
-            {{ if eq .Title "Experiences" }}
-                {{ range sort .Params.item "date_start" "desc"}}
-        <div class="resume-item">
-            <h4 class="title">{{ .title }}</h4>
-            <h5 class="organization">
-                <a href="{{ .company_url }}" target="_blank">{{ .company }}</a>
-            </h5>
-            <p class="date">
-              {{ time.Format "Jan 2, 2006" .date_start }} - {{ if .date_end }}{{ time.Format "Jan 2, 2006" .date_end }}{{ else }}Present{{ end }}<span class="middot-divider">.</span>{{.location}}
-            </p>
-            <p class="description">{{ .description | markdownify }}</p>
-            <div class="links">
-                <a class="btn" href="{{ .url }}" target="_blank">More Info</a>
-                {{ if .certificate_url }}
-                    <a class="btn btn-cert" href="{{ .certificate_url }}" target="_blank">View Certificate</a>
-                {{ end }}
-            </div>
-          <!-- </div> -->
-        </div><!-- Edn Resume Item -->
-        {{ end }}
+      <div class="col-lg">
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            {{ with .Site.GetPage "section" "resume" }}
+            {{ range .Pages }}
+              {{ if eq .Title "Experiences" }}
+                  {{ range sort .Params.item "date_start" "desc"}}
+          <div class="resume-item">
+              <h4>{{ .title }}</h4>
+              <h5 class="organization">
+                  <a href="{{ .company_url }}" target="_blank">{{ .company }}</a>
+              </h5>
+              <p class="date">
+                {{ .date_start | time.Format $global.Site.Params.dateFormat  }} - {{ if .date_end }}{{ .date_end | time.Format $global.Site.Params.dateFormat  }}{{ else }}Present{{ end }}<span class="middot-divider">.</span>{{.location}}
+              </p>
+              <p class="description">{{ .description | markdownify }}</p>
+          </div><!-- /Resume Item -->
+          {{ end }}
+              {{ end }}
             {{ end }}
           {{ end }}
-        {{ end }}
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
 </section><!-- /Resume Section -->
 
+<!-- Accomplishments Section -->
 <section id="accomplishments-category" class="accomplishments-category section">
   <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-5">
+    <div class="row">
       <div class="col-lg-4">
         <div class="">
           <div class="d-flex flex-column align-items-center">
@@ -164,12 +169,12 @@
                   {{ range sort .Params.item "date_start" "desc"}}
                   <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3 class="title">{{ .title }}</h3>
-                        <h4 class="organization">
+                        <h3>{{ .title }}</h3>
+                        <h4>
                             <a href="{{ .organization_url }}" target="_blank">{{ .organization }}</a>
                         </h4>
                         <p class="date">
-                          {{ time.Format "Jan 2, 2006" .date_start }} - {{ if .date_end }}{{ time.Format "Jan 2, 2006" .date_end }}{{ else }}Present{{ end }}
+                          {{ .date_start | time.Format $global.Site.Params.dateFormat  }} - {{ if .date_end }}{{ .date_end | time.Format $global.Site.Params.dateFormat  }}{{ else }}Present{{ end }}
                         </p>
                         <p class="description">{{ .description }}</p>
                         <div class="links">
@@ -186,11 +191,11 @@
           {{ end }}
       </div>
   </div>
-</section>
+</section><!-- /Accomplishments Section -->
 
 <section id="badges-category" class="badges-category section">
   <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-5">
+    <div class="row">
       <div class="col-lg-4">
         <div class="">
           <div class="container aos-init aos-animate" data-aos="fade-up">
@@ -204,13 +209,17 @@
         </div>
       </div>
       <div class="col-lg">
-        {{ with .Site.GetPage "section" "resume" }}
-          {{ range .Pages }}
-            {{ if eq .Title "Badges" }}
-                {{ .Content }}
+        <div class="timeline-item">
+          <div class="timeline-content">
+            {{ with .Site.GetPage "section" "resume" }}
+              {{ range .Pages }}
+                {{ if eq .Title "Badges" }}
+                    {{ .Content }}
+                {{ end }}
+              {{ end }}
             {{ end }}
-          {{ end }}
-        {{ end }}
+          </div>
+        </div>
     </div>
   </div>
 </section>

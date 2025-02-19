@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+  <div class="row">
+    <div class="col-lg">
+      <section id="blog-details" class="blog-details section">
+        
+    <div class="container">
+          <article class="article">
+            <div class="search-widget widget-item">
+              {{ partial "search.html" . }}
+            </div>
+            <div class="search-result">
+                <h3 class="search-result--title section-title"></h3>
+                <div class="search-result--list article-list--compact"></div>
+            </div>  
+          </article>
+        </div>
+      </section>
+    </div>
+  </div> <!-- End .row -->
+</div>  
+
+<script>
+    window.searchResultTitleTemplate = "{{ T `search.resultTitle` }}"
+</script>
+
+{{- $opts := dict "minify" hugo.IsProduction "JSXFactory" "createElement" -}}
+{{- $searchScript := resources.Get "ts/search.tsx" | js.Build $opts -}}
+<script type="text/javascript" src="{{ $searchScript.RelPermalink }}" defer></script>
+{{ end }}
