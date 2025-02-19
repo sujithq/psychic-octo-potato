@@ -71,9 +71,9 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'hugo serve',
-  //   url: 'http://localhost:1313',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+   webServer: {
+     command: 'hugo server --baseURL=http://localhost:1313/',
+     url: 'http://localhost:1313',
+     reuseExistingServer: !process.env.CI,
+   },
 });

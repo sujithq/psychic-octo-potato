@@ -19,6 +19,10 @@ let paths = files.flatMap(file => {
   return frontmatter.data.draft ? [] : [slug]
 })
 
+// Add default taxonomy list pages (tags, categories, series)
+const taxonomies = ['tags', 'categories', 'series']
+paths.push(...taxonomies) // Include `/tags`, `/categories`, `/series` as paths
+
 test.describe.configure({ mode: 'parallel' })
 
 for (const path of paths) {
