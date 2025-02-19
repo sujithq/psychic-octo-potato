@@ -5,7 +5,8 @@
 
 [params]
   dateFormat = "Jan 2, 2006"
-
+  [params.gravatar]
+    default = 'mp'
 [[menus.main]]
   name = 'Blog'
   pageRef = '/'
@@ -20,3 +21,8 @@
   categories = "categories"
   tags = "tags"
   series = "series"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

@@ -5,6 +5,9 @@ unsafe = true
 [goldmark.extensions.passthrough]
 enable = true
 
+[goldmark.extensions.extras]
+enable = true
+
 # LaTeX math support
 # https://gohugo.io/content-management/mathematics/
 [goldmark.extensions.passthrough.delimiters]
@@ -21,6 +24,6 @@ noClasses = false
 codeFences = true
 guessSyntax = true
 lineNoStart = 1
-lineNos = true
+lineNos = false
 lineNumbersInTable = true
-tabWidth = 4
+tabWidth = 2

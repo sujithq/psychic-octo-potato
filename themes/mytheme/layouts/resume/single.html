@@ -1,49 +1,33 @@
 {{ define "main" }}
 {{ $global := . }}
-<section id="bio-category" class="bio-category section">
-  <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+<!-- Bio Section -->
+<section id="Bio" class="Bio section">
+  <div class="container">
     <div class="row">
-      <div class="bio-widget widget-item">
       <div class="col-lg-4">
+        <div class="d-flex flex-column align-items-center">
           <div class="d-flex flex-column align-items-center">
             <div class="d-flex flex-column align-items-center">
-                {{ if .Params.author }}
-                <img src="{{ .Site.BaseURL }}authors/{{ .Params.author }}/avatar.png" class="rounded-circle flex-shrink-0" alt="">
-                {{ end }}
+              <div class="d-flex flex-column align-items-center">
                 {{ with .Params.author }}
                   {{ $author := site.GetPage (printf "authors/%s" .) }}
+                  {{ partial "gravatar/avatar-params" (dict "Email" $author.Params.email "ClassName" "rounded-circle flex-shrink-0" "Size" "150") }}
                   {{ with $author }}
                     <h4>{{ .Title }}</h4>
+                    <div class="social-links">
+                      {{ .Params.role | markdownify}}
+                    </div>
+                    <a href="{{ .Params.organizations.name }}">{{.Params.organizations.name}}</a>
                   {{ end }}
-                {{ end }}      
-            </div>
-            <!-- <div>
-              {{ with .Params.author }}
-                {{ $author := site.GetPage (printf "authors/%s" .) }}
-                {{ with $author }}
-                  {{ with .Params.socials }}
-                    {{ range . }}
-                      <a href="{{ .link }}"><i class="{{ .icon }}"></i></a>
-                    {{ end }}
-                  {{ else }}
-                    <p>No social links available.</p>
-                  {{ end }}
-
                 {{ end }}
-              {{ end }}
-            </div>   -->
-            <div class="social-links">
-              {{ with .Params.author }}
-                {{ $author := site.GetPage (printf "authors/%s" .) }}
-                {{ with $author }}
-                  {{ .Params.role }}
-                {{ end }}
-              {{ end }}
-            </div>
+              </div>
+            </div>  
           </div>
         </div>
       </div>
       <div class="col-lg">
+
         <div class="timeline-item">
           <div class="timeline-content">
             {{ with .Params.author }}
@@ -56,60 +40,59 @@
         </div>
           <div class="timeline-item">
             <div class="timeline-content">
-              <div class="col-lg-6">
-                <h4>Interests</h4>
-                <ul>
-                  {{ with .Params.author }}
-                  {{ $author := site.GetPage (printf "authors/%s" .) }}
-                    {{ with $author }}
-                      {{ with $author.Params.interests }}
-                        {{ range . }}
-                        <li>{{ . }}</li>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4>Interests</h4>
+                  <ul>
+                    {{ with .Params.author }}
+                    {{ $author := site.GetPage (printf "authors/%s" .) }}
+                      {{ with $author }}
+                        {{ with $author.Params.interests }}
+                          {{ range . }}
+                          <li>{{ . }}</li>
+                          {{ end }}
                         {{ end }}
                       {{ end }}
                     {{ end }}
-                  {{ end }}
+                  </ul>
+                </div>
+                <div class="col-lg">
+                  <h4>Education</h4>
+                  <ul class="list-unstyled">
+                    {{ with .Params.author }}
+                    {{ $author := site.GetPage (printf "authors/%s" .) }}
+                        {{ with $author }}
+                            {{ with $author.Params.education }}
+                                {{ range .courses }}
+                                <li class="d-flex align-items-start mb-3">
+                                    <i class="bi bi-mortarboard me-2 fs-4"></i>
+                                    <div>
+                                        <p class="course fw-bold m-0">{{ .course }}, {{ .year }}</p>
+                                        <p class="institution text-muted m-0">{{ .institution }}</p>
+                                    </div>
+                                </li>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
                 </ul>
-              </div>
-              <div class="col-lg">
-                <h4>Education</h4>
-                <ul class="list-unstyled">
-                  {{ with .Params.author }}
-                  {{ $author := site.GetPage (printf "authors/%s" .) }}
-                      {{ with $author }}
-                          {{ with $author.Params.education }}
-                              {{ range .courses }}
-                              <li class="d-flex align-items-start mb-3">
-                                  <i class="bi bi-mortarboard me-2 fs-4"></i>
-                                  <div>
-                                      <p class="course fw-bold m-0">{{ .course }}, {{ .year }}</p>
-                                      <p class="institution text-muted m-0">{{ .institution }}</p>
-                                  </div>
-                              </li>
-                              {{ end }}
-                          {{ end }}
-                      {{ end }}
-                  {{ end }}
-              </ul>
+                </div>
               </div>
             </div>
           </div>
+
       </div>
     </div>
   </div>
-</section>
+
+</section><!-- /Bio Section -->
 
 <!-- Resume Section -->
 <section id="resume" class="resume section">
-
   <div class="container">
-
     <div class="row">
-
       <div class="col-lg-4">
-        <div class="">
-          <div class="container aos-init aos-animate" data-aos="fade-up">
-          </div>
+        <div class="d-flex flex-column align-items-center">
           <div class="d-flex flex-column align-items-center">
             <div class="d-flex flex-column align-items-center">
               <h4>Experience</h4>
@@ -117,7 +100,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-lg">
 
         <div class="timeline-item">

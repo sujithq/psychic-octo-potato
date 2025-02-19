@@ -3,10 +3,10 @@
 # title = 'Sujith Quintelier'
 # theme = 'mytheme'
 
-# [module]
-#   [module.hugoVersion]
-#     extended = false
-#     min = "0.116.0"
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
 
 [params]
 #   dateFormat = "Jan 2, 2006"
@@ -49,4 +49,3 @@
 #   category = "categories"
 #   tag = "tags"
 #   series = "series"
-

@@ -1,91 +1,120 @@
----
++++
 # Display name
-title: Sujith Quintelier
+title = "Sujith Quintelier"
 
 # Full name (for SEO)
-first_name: Sujith
-last_name: Quintelier
+first_name = "Sujith"
+last_name = "Quintelier"
 
 # Status emoji
-status:
-  icon: ☕️
+[status]
+icon = "☕️"
 
 # Is this the primary user of the site?
-superuser: true
+superuser = true
 
 # Role/position/tagline
-role: Azure Cloud Solutions & Cybersecurity Architect | Azure (Identity and Access) Administrator | Azure DevOps, AI, Security & Network Engineer | Azure (Cosmos DB) Developer | GitHub Accredited Trainer for Delivering GitHub Actions - GitHub for Developers - GitHub Administration - GitHub Advanced Security Gettings Started training - GitHub Migrations - GitHub Enterprise Importer - Github Copilot for Business Fundamentals
-
+[params]
+  role = """
+  * Azure Cloud Solutions Architect
+  * Azure Cybersecurity Architect
+  * Azure Administrator 
+  * Azure Identity and Access Administrator 
+  * Azure DevOps Engineer 
+  * Azure AI Engineer 
+  * Azure Security Engineer 
+  * Azure Network Engineer 
+  * Azure Developer 
+  * Azure Cosmos DB Developer 
+  * GitHub Certified
+    * Actions
+    * Advanced Security
+    * Administration
+    * Foundations
+    * Sales Professional
+  * GitHub Accredited Trainer for Delivering 
+    * GitHub Actions 
+    * GitHub for Developers 
+    * GitHub Administration 
+    * GitHub Advanced Security Gettings Started training 
+    * GitHub Migrations 
+    * GitHub Enterprise Importer 
+    * Github Copilot for Business Fundamentals
+  * Terraform Associate
+  """
+  # Interests to show in About widget
+  interests = [
+    "Azure",
+    "Dev(Sec)Ops",
+    "GitHub",
+    "Kubernetes",
+    "IaC(Terraform, Bicep)",
+    "Security",
+    "NOSQL",
+    "Programming Languages",
+    "Application Development",
+    ".NET",
+    "Architecture",
+    "AI",
+    "ML",
+    "Cognitive Services"
+  ]
+  # Enter email to display Gravatar (if Gravatar enabled in Config)
+  email = "sujith.quintelier@gmail.com"
 
 # Organizations/Affiliations to show in About widget
-organizations:
-  - name: "Xebia|Microsoft Services"
-    url: https://xebia.com/digital-transformation/microsoft-services/
+[organizations]
+name = "Xebia|Microsoft Services"
+url = "https://xebia.com/digital-transformation/microsoft-services/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Azure Consultant, DevOps Architect, and GitHub Trainer with 25+ years of IT expertise, specializing in cloud solutions, security, automation, and infrastructure as code.
+bio = "Azure Consultant, DevOps Architect, and GitHub Trainer with 25+ years of IT expertise, specializing in cloud solutions, security, automation, and infrastructure as code."
 
-# Interests to show in About widget
-interests:
-- Azure
-- Dev(Sec)Ops
-- GitHub
-- Kubernetes
-- IaC(Terraform, Bicep)
-- Security
-- NOSQL
-- Programming Languages
-- Application Development
-- .NET
-- Architecture
-- AI
-- ML
-- Cognitive Services
+
+
 # Education to show in About widget
-education:
-  courses:
-  - course: Applied Informatics
-    institution: Karel de Grote Hogeschool
-    year: 2000
-  - course: All Weapons
-    institution: Voorbereidende Divisie Koninklijke Militaire School
-    year: 1997
-  - course: Economics-Mathematics
-    institution: Koninklijk Atheneum Lokeren
-    year: 1996
+[education]
+  [[education.courses]]
+  course = "Applied Informatics"
+  institution = "Karel de Grote Hogeschool"
+  year = 2000
+
+  [[education.courses]]
+  course = "All Weapons"
+  institution = "Voorbereidende Divisie Koninklijke Militaire School"
+  year = 1997
+
+  [[education.courses]]
+  course = "Economics-Mathematics"
+  institution = "Koninklijk Atheneum Lokeren"
+  year = 1996
 
 # Social/Academic Networking
-# For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "/#contact" for contact widget.
+[[socials]]
+name = "twitter"
+link = "https://twitter.com/SujithQ"
+icon = "bi bi-twitter-x"
 
-socials:
-  - name: twitter
-    link: https://twitter.com/SujithQ
-    icon: "bi bi-twitter-x"
-  - name: facebook
-    link: https://www.facebook.com/sujith.quintelier
-    icon: "bi bi-facebook"
-  - name: github
-    link: https://github.com/sujithq
-    icon: "bi bi-github"
-  - name: linkedin
-    link: https://www.linkedin.com/in/sujithquintelier/
-    icon: "bi bi-linkedin"
+[[socials]]
+name = "facebook"
+link = "https://www.facebook.com/sujith.quintelier"
+icon = "bi bi-facebook"
 
-  # Link to a PDF of your resume/CV.
-  # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
-  # and uncomment the lines below.
-  #- icon: cv
-  #  icon_pack: ai
-  #  link: uploads/resume.pdf
+[[socials]]
+name = "github"
+link = "https://github.com/sujithq"
+icon = "bi bi-github"
 
-# Enter email to display Gravatar (if Gravatar enabled in Config)
-email: 'sujith.quintelier@gmail.com'
+[[socials]]
+name = "linkedin"
+link = "https://www.linkedin.com/in/sujithquintelier/"
+icon = "bi bi-linkedin"
+
+
 
 # Highlight the author in author lists? (true/false)
-highlight_name: true
----
+highlight_name = true
++++
 
 Sujith brings more than 25 years of IT experience, combined with excellent communication and presentation skills. He is an efficient, analytical, positive thinking professional who has successfully demonstrated the ability of understanding business requirements, specifying systems, developing working software and designing Azure solutions.
 
