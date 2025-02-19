@@ -31,6 +31,6 @@ features = ['some', 'awesome', 'features']
 #   repo = 'https://github.com/owner/repo'
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
+  categories = 'categories'
+  tags = 'tags'
+  series = 'series'

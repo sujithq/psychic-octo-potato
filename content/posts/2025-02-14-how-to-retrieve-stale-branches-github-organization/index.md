@@ -3,28 +3,8 @@ title = '🚀 How to Retrieve Stale Branches Across All Repositories in a GitHub
 date = 2025-02-14T01:00:00-00:00
 draft = false
 tags = ['GitHub', 'bash']
-categories = [
-  'Professional Experience',
-  # 'Technical Skills',
-  # 'Certifications & Training',
-  # 'Projects & Contributions',
-  # 'Speaking & Training',
-  # 'Publications & Writing',
-  # 'Education',
-  # 'Community Engagement'
-]
-series = [
-  # 'Azure DevOps in Practice',
-  # 'Infrastructure as Code (IaC) Essentials',
-  # 'Optimizing Cloud Deployments',
-  # 'Building & Deploying .NET Apps',
-  'GitHub & DevOps',
-  # 'Performance & Scaling in the Cloud',
-  # 'Advent of Code Solutions',
-  # 'Hugo Website Development',
-  # 'PowerShell for DevOps',
-  # 'Workshops & Training'
-]
+categories = [ 'Professional Experience' ]
+series = [ 'GitHub and DevOps' ]
 layout = 'single'
 [params]
     cover = true

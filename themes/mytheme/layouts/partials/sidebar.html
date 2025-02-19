@@ -45,6 +45,7 @@
       </div>
     {{ end }}
     </div><!--/Recent Posts Widget -->
+
     {{ range $taxName, $termsMap := .Site.Taxonomies }}
     {{ $taxonomyPage := site.GetPage (printf "/%s" $taxName) }}
       <div class="{{$taxName}}-widget widget-item">

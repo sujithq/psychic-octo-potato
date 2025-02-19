@@ -45,7 +45,8 @@
 # pageRef = '/resume'
 # weight = 20
 # 
-# [taxonomies]
-#   category = "categories"
-#   tag = "tags"
-#   series = "series"
+
+[taxonomies]
+  categories = 'categories'
+  tags = 'tags'
+  series = 'series'

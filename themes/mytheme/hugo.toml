@@ -18,9 +18,9 @@
   weight = 20
 
 [taxonomies]
-  categories = "categories"
-  tags = "tags"
-  series = "series"
+  categories = 'categories'
+  tags = 'tags'
+  series = 'series'
 
 [module]
   [module.hugoVersion]
