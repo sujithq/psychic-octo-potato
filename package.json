@@ -1,0 +1,14 @@
+{
+  "name": "psychic-octo-potato",
+  "version": "1.0.0",
+  "description": "My Blog Dev Version\r https://sujithq.github.io/psychic-octo-potato/",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4"
+  }
+}
