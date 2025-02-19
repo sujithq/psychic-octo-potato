@@ -32,7 +32,7 @@
     }
   }
     
-// Apply the mixin for both tags and categories
+// Apply the mixin
 @include taxonomy-widget("tags");
 @include taxonomy-widget("categories");
 @include taxonomy-widget("series");
