@@ -10,5 +10,9 @@
   "devDependencies": {
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.4"
+  },
+  "dependencies": {
+    "glob": "^11.0.1",
+    "gray-matter": "^4.0.3"
   }
 }
