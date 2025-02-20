@@ -1,148 +1,71 @@
 {{ define "main" }}
+  <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        {{ with first 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
+          {{ $latest := index . 0 }}
+          <!-- Page Title -->
+        <div class="page-title">
+          <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">{{ $latest.Title }}</h1>
+            <!-- <nav class="breadcrumbs">
+              <ol>
+                <li><a href="/">Home</a></li>
+                <li class="current">{{ $latest.Title }}</li>
+              </ol>
+            </nav> -->
+          </div>
+        </div>
+        <!-- End Page Title -->
+          {{ partial "blog-detail.html" (dict "page" $latest "useContent" false "useLink" true) }}
+          <!-- {{ template "_internal/disqus.html" $latest }} -->
+        {{ end }}
 
-    <!-- Slider Section -->
-    <!-- <section id="slider" class="slider section dark-background">
-
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "centeredSlides": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              }
-            }
-          </script>
-
-          <div class="swiper-wrapper" id="swiper-wrapper-516949e21fea0bab" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-2592px, 0px, 0px); transition-delay: 0ms;">
-            
-          <div class="swiper-slide" style="background-image: url('img/post-slide-4.jpg');" role="group" aria-label="4 / 4" data-swiper-slide-index="3">
-              <div class="content">
-                <h2><a href="about">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
-              </div>
-            </div><div class="swiper-slide swiper-slide-prev" style="background-image: url('img/post-slide-1.jpg');" role="group" aria-label="1 / 4" data-swiper-slide-index="0">
-              <div class="content">
-                <h2><a href="about">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
-              </div>
-            </div><div class="swiper-slide swiper-slide-active" style="background-image: url('img/post-slide-2.jpg');" role="group" aria-label="2 / 4" data-swiper-slide-index="1">
-              <div class="content">
-                <h2><a href="about">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
-              </div>
-            </div><div class="swiper-slide swiper-slide-next" style="background-image: url('img/post-slide-3.jpg');" role="group" aria-label="3 / 4" data-swiper-slide-index="2">
-              <div class="content">
-                <h2><a href="about">13 Amazing Poems from Shel Silverstein with Valuable Life Lessons</a></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
-              </div>
-            </div></div>
-
-          <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-516949e21fea0bab"></div>
-          <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-516949e21fea0bab"></div>
-
-          <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
-      </div>
-
-    </section> -->
-    <!-- /Slider Section -->
-
-    <!-- Trending Category Section -->
-    <!-- <section id="trending-category" class="trending-category section">
-
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"> -->
-
-        <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-          <div class="row">
-            
-
-            <div class="col-lg-8">
-              {{ with first 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
-                {{ $latest := index . 0 }}
                 <!-- Page Title -->
-              <div class="page-title">
-                <div class="container d-lg-flex justify-content-between align-items-center">
-                  <h1 class="mb-2 mb-lg-0">{{ $latest.Title }}</h1>
-                  <!-- <nav class="breadcrumbs">
-                    <ol>
-                      <li><a href="/">Home</a></li>
-                      <li class="current">{{ $latest.Title }}</li>
-                    </ol>
-                  </nav> -->
+                <div class="page-title">
+                  <div class="container d-lg-flex justify-content-between align-items-center">
+                    <h2 class="mb-2 mb-lg-0">Other Posts</h2>
+                  </div>
                 </div>
-              </div>
-              <!-- End Page Title -->
-                {{ partial "blog-detail.html" (dict "page" $latest) }}
-                {{ template "_internal/disqus.html" $latest }}
-              {{ end }}
-            </div>
-            <div class="col-lg-4 sidebar">
-              {{ partial "sidebar.html" . }}
-            </div>
-          </div> <!-- End .row -->
-          <div class="row">
-            
-            <div class="col-lg-8">
-              <section id="blog-details" class="blog-details section">
-                <div class="container">
-                  
-                  <!-- Page Title -->
-                  <div class="page-title">
-                    <div class="container d-lg-flex justify-content-between align-items-center">
-                      <h2 class="mb-2 mb-lg-0">Other Posts</h2>
+                <!-- End Page Title -->
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <div class="row">
+                      {{ $remainingPosts := after 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
+                      {{ range $remainingPosts }}
+                        {{ $cover := "" }}
+                        {{ if .Params.cover }}
+                          {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
+                        {{ else }}
+                          {{ $cover = "img/default-cover.jpg" }}
+                        {{ end }}
+                        <div class="col-lg-6">
+                          <a href="{{ .RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
+                            <div class="post-meta">
+                              <span class="date">
+                                {{ with index .Params.tags 0 }}
+                                  {{ . }}
+                                {{ end }}
+                              </span>
+                              <span class="mx-1">•</span>
+                              <span>{{ .Date.Format .Site.Params.dateFormat }}</span>
+                            </div>
+                            <h6><a href="{{ .RelPermalink }}">{{ .Title }}</a></h6>
+                        </div>
+                      {{ end}}
+                      
                     </div>
                   </div>
-                  <!-- End Page Title -->
-                  <article class="article">
-                    
-                    {{ $remainingPosts := after 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
-                    {{ range $remainingPosts }}
-                      {{ $cover := "" }}
-                      {{ if .Params.cover }}
-                        {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
-                      {{ else }}
-                        {{ $cover = "img/default-cover.jpg" }}
-                      {{ end }}
-                      <div class="col-lg-3 border-start custom-border">
-                        <div class="post-entry">
-                          <a href="{{ .RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
-                          <div class="post-meta">
-                            <span class="date">
-                              {{ with index .Params.tags 0 }}
-                                {{ . }}
-                              {{ end }}
-                            </span>
-                            <span class="mx-1">•</span>
-                            <span>{{ .Date.Format .Site.Params.dateFormat }}</span>
-                          </div>
-                          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                          <!-- <p class="mb-4 d-block">{{ .Summary }}</p> -->
-                        </div>
-                      </div>
-                    {{ end}}
-                        </article>
                 </div>
-              </section>
+      </div>
+      <div class="col-lg-4 sidebar">
+        {{ partial "sidebar.html" . "showRecentPosts" false }}
+      </div>
+    </div> <!-- End .row -->
+    <div class="row">
+      <div class="col-lg-8">
 
-          </div>          
-          </div> <!-- End .row -->
-        </div>
-
-
+    </div>          
+    </div> <!-- End .row -->
+  </div>
 {{ end }}

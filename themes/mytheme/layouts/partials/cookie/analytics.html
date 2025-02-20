@@ -1,0 +1,17 @@
+{{ if .Site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+
+gtag('consent', 'default', {
+  'analytics_storage': 'denied' // Block GA by default
+});
+
+// Load GA if consent was given
+if (localStorage.getItem("cookieConsent") === "accepted") {
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googleAnalytics }}');
+}
+</script>
+{{ end }}

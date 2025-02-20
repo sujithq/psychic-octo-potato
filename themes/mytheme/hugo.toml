@@ -5,6 +5,7 @@
 
 [params]
   dateFormat = "Jan 2, 2006"
+  googleAnalytics = "G-XXXXXXXXXX" # Replace with your GA4 ID
   [params.gravatar]
     default = 'mp'
 [[menus.main]]

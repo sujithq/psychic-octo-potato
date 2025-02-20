@@ -1,5 +1,5 @@
 +++
-title = '🔹 AZ-700 Prep Highlights'
+title = '📘 AZ-700 Prep Highlights'
 date = '2022-06-03 06:00:00Z'
 draft = false
 tags = ['Azure',

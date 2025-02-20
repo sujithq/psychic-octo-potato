@@ -1,12 +1,17 @@
 <!-- Blog Details Section -->
 <section id="blog-details" class="blog-details section">
     <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
+      
       <article class="article">
         {{ if .page.Params.cover }}
             {{ $cover := printf "%s/cover.jpg" .page.RelPermalink }}   
             <div class="post-img">
-            <img src="{{ $cover }}" alt="" class="img-fluid">
+              {{ if .useLink }}
+                <a href="{{ .page.RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
+              {{ else }}
+                <img src="{{ $cover }}" alt="" class="img-fluid">
+              {{ end }}
+            
             </div>        
         {{ end }}
         <div class="meta-top">
@@ -18,7 +23,11 @@
         </div><!-- End meta top -->
 
         <div class="content">
-          {{ .page.Content }}
+          {{ if .useContent}}
+            {{ .page.Content }}
+          {{ else }}
+            {{ .page.Summary }}
+          {{ end }}
         </div><!-- End post content -->
 
         <div class="meta-bottom">

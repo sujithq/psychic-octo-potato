@@ -20,6 +20,8 @@
       {{ partial "search.html" . }}
     </div><!--/Search Widget -->
 
+    {{ if .Site.Params.showRecentPosts }}
+
     <!-- Recent Posts Widget -->
     <div class="recent-posts-widget widget-item">
       <h3 class="widget-title">Recent Posts</h3>
@@ -45,6 +47,7 @@
       </div>
     {{ end }}
     </div><!--/Recent Posts Widget -->
+    {{ end }}
 
     {{ range $taxName, $termsMap := .Site.Taxonomies }}
     {{ $taxonomyPage := site.GetPage (printf "/%s" $taxName) }}

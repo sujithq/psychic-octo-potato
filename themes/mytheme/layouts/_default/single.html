@@ -19,11 +19,11 @@
         </div>
       </div>
       <!-- End Page Title -->
-      {{ partial "blog-detail.html" (dict "page" .) }}
+      {{ partial "blog-detail.html" (dict "page" . "useContent" true "useLink" false) }}
       {{ template "_internal/disqus.html" . }}
     </div>
     <div class="col-lg-4 sidebar">
-      {{ partial "sidebar.html" . }}
+      {{ partial "sidebar.html" . "showRecentPosts" true }}
     </div>
   </div>
 </div>
