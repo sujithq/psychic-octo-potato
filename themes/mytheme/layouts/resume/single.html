@@ -15,10 +15,11 @@
                   {{ partial "gravatar/avatar-params" (dict "Email" $author.Params.email "ClassName" "rounded-circle flex-shrink-0" "Size" "150") }}
                   {{ with $author }}
                     <h4>{{ .Title }}</h4>
+                    <h5><a href="{{ .Params.organizations.name }}">{{.Params.organizations.name}}</a></h5>
                     <div class="social-links">
                       {{ .Params.role | markdownify}}
                     </div>
-                    <a href="{{ .Params.organizations.name }}">{{.Params.organizations.name}}</a>
+                    
                   {{ end }}
                 {{ end }}
               </div>

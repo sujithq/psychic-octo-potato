@@ -116,52 +116,58 @@ icon = "bi bi-linkedin"
 highlight_name = true
 +++
 
-Sujith brings more than 25 years of IT experience, combined with excellent communication and presentation skills. He is an efficient, analytical, positive thinking professional who has successfully demonstrated the ability of understanding business requirements, specifying systems, developing working software and designing Azure solutions.
+I started my career as a **developer specializing in Microsoft technologies**, building applications with **.NET** and working on enterprise software solutions. Over the years, I expanded my expertise beyond development, diving deep into **cloud architecture, DevOps, and cybersecurity**. Today, with over **25 years in IT**, I focus on **helping businesses design, implement, and secure modern cloud solutions**.  
 
-As a certified **Azure Solutions Architect** he demonstrates skills and knowledge to advise stakeholders and translate business requirements into secure, scalable, and reliable solutions. He has advanced experience and knowledge across various aspects of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data management, budgeting, and governance. He also understands how managing decisions in each area affect an overall solution.
+## **🌍 My Cloud & DevOps Journey**  
 
-As a certified **Cybersecurity Architect** he has subject matter expertise in designing and evolving the cybersecurity strategy to protect an organization’s mission and business processes across all aspects of the enterprise architecture.
+As a **certified Azure Solutions Architect**, I specialize in designing, implementing, and managing **secure, scalable, and reliable** cloud solutions. My journey in **.NET development** gave me a **strong foundation in software engineering**, and as cloud technologies evolved, I transitioned into **Azure, DevOps, and automation**, bringing a **developer-first approach** to cloud and infrastructure.  
 
-As a certified **DevOps Engineer** he demonstrates the ability to combine people, process, and technologies to continuously deliver valuable products and services that meet end user needs and business objectives. He streamlines delivery by optimizing practices, improving communications and collaboration, and creating automation.
+I'm deeply passionate about **DevOps culture and automation**. With certifications in **GitHub Actions, GitHub Advanced Security, and Terraform**, I help teams **optimize their CI/CD pipelines, improve software security, and streamline cloud infrastructure with infrastructure as code (IaC)**.  
 
-As a certified partner for **GitHub Actions** he validates subject matter expertise with applying continuous integration/continuous delivery (CI/CD) patterns and practices using GitHub Actions in the enterprise.
+## **🚀 What I Do Best**  
 
-As a certified partner for **GitHub Advanced Security** he validates subject matter expertise with applying software supply chain security patterns and practices with GitHub Advanced Security in the enterprise.
+- **Cloud Architecture** – Designing robust **Azure** environments for businesses of all sizes  
+- **DevOps & Automation** – Implementing **CI/CD pipelines, infrastructure as code (IaC), and cloud automation**  
+- **Security & Compliance** – Ensuring **secure software delivery pipelines, IAM, and cloud security best practices**  
+- **GitHub Training & Consulting** – Helping teams adopt GitHub **Actions, Advanced Security, and Enterprise Administration**  
+- **Software Development** – Leveraging my **.NET background** to build **cloud-native applications**  
 
-As a certified partner for **GitHub Administration** he validates subject matter expertise with the deployment and administration of GitHub Enterprise as well as how to provide support for GitHub users in the enterprise.
+## **🔧 My Certifications & Expertise**  
 
-As a certified partner for **GitHub Foundations** he validates subject matter expertise by measuring entry-level skills with GitHub basics like repositories, commits, branching, markdowns, and project management.
+I've spent years expanding my knowledge across **cloud, DevOps, and security**, earning multiple certifications, including:  
 
-As an **Accredited Trainer** for GitHub he is allowed to give training for
+### **☁️ Cloud & Infrastructure**  
+✅ **Azure Solutions Architect** – Cloud strategy & architecture  
+✅ **Azure Administrator** – Managing cloud infrastructure  
+✅ **Azure Developer** – Building cloud-native applications with **.NET**  
+✅ **Azure Network Engineer** – Hybrid networking & routing  
+✅ **Azure Cosmos DB Developer** – Scalable NoSQL solutions  
 
-* GitHub Actions
-* GitHub for Developers
-* GitHub Advanced Security Getting Started
-* GitHub Administration
-* GitHub Migrations
-* GitHub Enterprise Importer
-* GitHub Copilot for Business Fundamentals
+### **🛠 DevOps & GitHub**  
+✅ **GitHub Actions** – CI/CD pipelines  
+✅ **GitHub Advanced Security** – Secure software development  
+✅ **GitHub Administration** – Enterprise GitHub management  
+✅ **Terraform Associate (HashiCorp)** – Infrastructure as Code (IaC) automation  
 
-As a certified **Azure Cosmos DB Developer** he shows subject matter expertise designing, implementing, and monitoring cloud-native applications that store and manage data. His responsibilities include designing and implementing data models and data distribution, loading data into an Azure Cosmos DB database, and optimizing and maintaining the solution. He integrates the solution with other Azure services. He also designs, implements, and monitors solutions that consider security, availability, resilience, and performance requirements. He has solid knowledge and experience developing apps for Azure and working with Azure Cosmos DB database technologies. He should be proficient at developing applications by using the Core (SQL) API and SDKs, writing efficient queries and creating appropriate index policies, provisioning and managing resources in Azure, and creating server-side objects with JavaScript. He should be able to interpret JSON, read C# or Java code, and use PowerShell.
+### **🔐 Security & Identity**  
+✅ **Azure Security Engineer** – Threat protection & security controls  
+✅ **Azure Identity & Access Administrator** – IAM & Azure AD management  
+✅ **Cybersecurity Architect** – Enterprise-wide security strategy  
 
-As a certified **Azure Identity and Access Administrator** he validates the skills and knowledge to design, implement, and operate an organization’s identity and access management systems using Azure AD. He provides a seamless experience and self-service management capabilities for all users. He is responsible for troubleshooting, monitoring, and reporting of the identity and access environment.
+### **📢 Training & Mentorship**  
+As a **GitHub Accredited Trainer**, I deliver training on:  
+🎓 GitHub Actions | GitHub for Developers | Advanced Security | GitHub Administration | Copilot for Business  
 
-As a certified **Azure Network Engineer** he validates skills and subject matter expertise in planning, implementing, and maintaining Azure networking solutions, including hybrid networking, connectivity, routing, security, and private access to Azure services. He deploys networking solutions using Azure Portal and other methods, including PowerShell, Azure Command-Line Interface (CLI), and Azure Resource Manager templates (ARM templates).
+## **🛠 My Approach to Technology**  
 
-As a certified **Azure AI Engineer** he validates the skills and knowledge to use Cognitive Services, Machine Learning, and Knowledge Mining to architect and implement Microsoft AI solutions involving natural language processing, speech, computer vision, bots, and agents.
+I believe that **great architecture starts with great development**. My **.NET background** helps me **bridge the gap between software development and cloud infrastructure**, ensuring that applications are **not only well-built but also scalable, secure, and efficient in the cloud**.  
 
-As a certified **Azure Administrator** he validates the skills and knowledge to implement, manage, and monitor an organization’s Azure environment. He has a deep understanding of each implementing, managing, and monitoring identity, governance, storage, compute, and virtual networks in a cloud environment, plus provision, size, monitor, and adjust resources, when needed.
+I love **solving complex technical challenges** and finding **practical solutions** that help businesses **innovate efficiently**. Whether it’s **optimizing cloud environments, implementing automation, or securing software supply chains**, I focus on **scalability, security, and reliability**.  
 
-As a certified **Azure Security Engineer** he demonstrates the skills and knowledge to implement security controls and threat protection, manage identity and access, and protect data, applications, and networks in cloud and hybrid environments as part of end-to-end infrastructure.
+Beyond the technical side, I enjoy **mentoring teams, guiding DevOps transformations, and exploring emerging technologies** to stay ahead in the ever-evolving cloud landscape.  
 
-As a certified **Azure Developer** he demonstrates the skills and knowledge to design, build, test, and maintain cloud applications and services on Microsoft Azure. He participates in all phases of cloud development from requirements definition and design, to development, deployment, and maintenance.
+## **🌟 Let's Connect!**  
 
-As a HashiCorp Certified: **Terraform Associate**, he possesses an in-depth understanding of the foundational concepts, skills, and practical applications of HashiCorp Terraform, the open-source infrastructure as code software tool. This certification underscores his proficiency in writing, planning, and creating automated infrastructure with Terraform, enabling scalable, efficient, and secure deployments. With a keen grasp on both the theoretical and practical aspects of Terraform, he adeptly navigates its ecosystem to implement and manage infrastructure across a variety of cloud providers. Sujith’s expertise extends to understanding the significance of Terraform Enterprise for businesses seeking to enhance their infrastructure management practices with advanced features for collaboration, governance, and self-service capabilities. His certification is a testament to his ability to leverage Terraform to automate and optimize infrastructure, aligning IT resources with business needs and accelerating digital transformation.
+If you're interested in **cloud, DevOps, or GitHub best practices**, let's chat! Whether you're looking for **advice, collaboration, or training**, I’m always happy to share knowledge and explore new opportunities.  
 
-As a **Azure DevOps professional**, he brings a comprehensive mastery of Azure DevOps services and principles, demonstrating his capability to streamline software development and delivery processes. This certification validates his extensive knowledge and hands-on experience in using Azure DevOps to foster a culture of collaboration and communication between development and operations teams. Sujith excels in implementing DevOps practices such as continuous integration (CI), continuous delivery (CD), automation of workflows, and monitoring across cloud and hybrid environments. His proficiency encompasses managing source code, facilitating agile project management, automating builds and deployments, and optimizing feedback mechanisms for continuous improvement. The certification confirms Sujith's skills in aligning software development practices with business objectives, ensuring rapid, reliable, and efficient delivery of high-quality software solutions. His expertise in Azure DevOps positions him as a key architect in the transformation towards a more agile, productive, and secure development lifecycle.
-
-As **Lead developer**, he has carried the full weight of software development in medium-sized software firms in the past few years. As such he is guiding other developers, streamlining development, defining standards, organizing code reviews, exploring new technologies, etc. Having worked on the same products for several years, he has developed a deeper understanding of the evolution of software.
-
-As an **AWS Cloud Quest Cloud Practitioner** he has demonstrated basic solution building knowledge using AWS services and has a fundamental understanding of AWS Cloud concepts. He has acquired hands-on experience with compute, networking, database and security services.
-
-He is an excellent team player, capable of working under pressure and without supervision. He is well organized, self-motivated, and has demonstrated important skills in dealing with issues and resolving them prior to becoming problems. He is an easy learning person used to acquire new knowledge about customer systems, standards, tools and trends. He is eager to learn new technologies and is continuously extending his knowledge.
+📩 **Reach out, and let’s build something awesome together!** 🚀  
