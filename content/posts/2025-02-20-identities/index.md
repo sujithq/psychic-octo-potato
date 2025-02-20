@@ -2,14 +2,28 @@
 title = '🔒 Securing Azure Identities'
 date = '2025-02-20 06:00:00Z'
 draft = false
-tags = ['Azure',
-  'az-700',
-  'networking',
-  'VNET',
-  'Availability Zones',
-  'Public IP',
-  'Azure DNS',
-  'Azure Private DNS' ]
+tags = [
+  "Azure",
+  "Microsoft Entra ID",
+  "Identities",
+  "Cybersecurity",
+  "Cloud Security",
+  "Multi-Factor Authentication (MFA)",
+  "Passwordless Authentication",
+  "Phishing",
+  "Managed Identities",
+  "Service Principals",
+  "Principle of Least Privilege",
+  "Conditional Access",
+  "Identity Protection",
+  "Temporary Access Pass (TAP)",
+  "Device Identity",
+  "Group Identity",
+  "Role-Based Access Control (RBAC)",
+  "Guest Users",
+  "User Accounts",
+  "Application Registrations"
+]
 categories = [
   'Professional Experience',
   'Technical Skills',

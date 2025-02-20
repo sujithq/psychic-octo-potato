@@ -2,14 +2,25 @@
 title = '📘 AZ-700 Prep Highlights'
 date = '2022-06-03 06:00:00Z'
 draft = false
-tags = ['Azure',
-  'az-700',
-  'networking',
-  'VNET',
-  'Availability Zones',
-  'Public IP',
-  'Azure DNS',
-  'Azure Private DNS' ]
+tags = [
+  "Azure",
+  "Azure Networking",
+  "AZ-700",
+  "Virtual Networks",
+  "VNets",
+  "Subnetting",
+  "Network Security",
+  "VNet Peering",
+  "Hybrid Networking",
+  "Azure DNS",
+  "Public IPs",
+  "Azure Load Balancer",
+  "Traffic Routing",
+  "Gateway Transit",
+  "User Defined Routes",
+  "Cloud Networking",
+  "Azure Certification"
+]
 categories = [ 'Certifications & Training' ]
 series = [ 'Workshops and Training' ]
 

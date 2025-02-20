@@ -2,7 +2,26 @@
 title = '🔹 Azure Storage Redundancy: Ensuring Data Availability and Durability'
 date = '2023-03-20 06:00:00Z'
 draft = false
-tags = ['Azure', 'Azure Storage', 'RTO', 'RPO', 'HA', 'Redundancy']
+tags = [
+  "Azure",
+  "Azure Storage",
+  "Storage Redundancy",
+  "Cloud Storage",
+  "Data Durability",
+  "High Availability",
+  "Geo-Redundant Storage",
+  "Zone-Redundant Storage",
+  "LRS",
+  "ZRS",
+  "GRS",
+  "GZRS",
+  "RA-GRS",
+  "RA-GZRS",
+  "Disaster Recovery",
+  "Backup Strategy",
+  "Business Continuity"
+]
+
 categories = [ 'Technical Skills' ]
 series = [ 'Azure in Practice' ]
 

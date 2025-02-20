@@ -3,17 +3,21 @@ title = '🔍 Azure Load Balancing Explained: Choosing the Right Option'
 date = '2022-06-17 06:00:00Z'
 draft = false
 tags = [
-  'Azure',
-  'Load Balancing',
-  'Azure Load Balancer',
-  'Traffic Manager',
-  'Azure Application Gateway',
-  'Azure Front Door',
-  'HTTP(S)',
-  'non-HTTP(S)',
-  'Global',
-  'Regional',
-  'HA',
+  "Azure",
+  "Azure Load Balancer",
+  "Azure Traffic Manager",
+  "Azure Application Gateway",
+  "Azure Front Door",
+  "Load Balancing",
+  "Networking",
+  "Cloud Infrastructure",
+  "Global Traffic Routing",
+  "Layer 4 vs Layer 7",
+  "High Availability",
+  "Scalability",
+  "Performance Optimization",
+  "DNS Routing",
+  "Web Application Security"
 ]
 categories = [
   'Professional Experience',

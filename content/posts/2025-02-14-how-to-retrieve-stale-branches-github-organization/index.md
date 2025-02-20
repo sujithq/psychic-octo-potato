@@ -2,7 +2,23 @@
 title = '🚀 How to Retrieve Stale Branches Across All Repositories in a GitHub Organization'
 date = 2025-02-14T01:00:00-00:00
 draft = false
-tags = ['GitHub', 'bash']
+tags = [
+  "GitHub",
+  "GitHub CLI",
+  "Automation",
+  "Bash Scripting",
+  "DevOps",
+  "Repository Management",
+  "Stale Branches",
+  "Git",
+  "Scripting",
+  "GitHub API",
+  "Branch Cleanup",
+  "GitHub Organization",
+  "Security",
+  "Collaboration",
+  "Productivity"
+]
 categories = [ 'Professional Experience' ]
 series = [ 'GitHub and DevOps' ]
 layout = 'single'
