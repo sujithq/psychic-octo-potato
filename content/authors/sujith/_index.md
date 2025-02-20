@@ -61,14 +61,15 @@ superuser = true
   ]
   # Enter email to display Gravatar (if Gravatar enabled in Config)
   email = "sujith.quintelier@gmail.com"
+  # Short bio (displayed in user profile at end of posts)
+  bio = "Azure Consultant, DevOps Architect, and GitHub Trainer with 25+ years of IT expertise, specializing in cloud solutions, security, automation, and infrastructure as code."
 
 # Organizations/Affiliations to show in About widget
 [organizations]
 name = "Xebia|Microsoft Services"
 url = "https://xebia.com/digital-transformation/microsoft-services/"
 
-# Short bio (displayed in user profile at end of posts)
-bio = "Azure Consultant, DevOps Architect, and GitHub Trainer with 25+ years of IT expertise, specializing in cloud solutions, security, automation, and infrastructure as code."
+
 
 
 

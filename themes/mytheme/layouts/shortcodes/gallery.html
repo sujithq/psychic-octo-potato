@@ -48,7 +48,7 @@
   {{else if in .Name "-l." }}
     {{ $image_size = "gallery-item--large" }}
   {{end}}
-  <div class="col-sm-2">
+  <div class="col-sm-2 markdown-content">
     <a data-fancybox="gallery-{{$album}}" href="{{ .RelPermalink }}" {{ with $caption }}data-caption="{{.|markdownify|emojify|safeHTMLAttr}}"{{ end }}>
         <img src="{{ $image.RelPermalink }}" loading="lazy" alt="{{ plainify $caption | default $filename }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
         <!-- <img src="{{ $image.RelPermalink }}" loading="lazy" alt="{{ plainify $caption | default $filename }}" width="100" height="100"> -->
