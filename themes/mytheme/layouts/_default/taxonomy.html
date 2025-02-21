@@ -1,30 +1,42 @@
 {{ define "main" }}
-<div class="recent-posts-widget widget-item">
-
-  <h1>{{ .Title }}</h1>
-    {{ range .Pages }}
-      <!-- <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li> -->
-      <div class="post-item">
-        <!-- Fetch Cover Image -->
-        {{ $cover := "" }}
-        {{ if .Params.cover }}
-          {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
-        {{ else }}
-          {{ $cover = "img/default-cover.jpg" }}
-        {{ end }}
-    
-        <img src="{{ $cover }}" alt="Cover Image" class="flex-shrink-0">
-    
-        <div>
-          <!-- Fetch Title and Link -->
-          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-    
-          <!-- Fetch Date -->
-          <time datetime="{{ .Date.Format .Site.Params.dateFormat }}">
-            {{ .Date.Format .Site.Params.dateFormat }}
-          </time>
-        </div>
-      </div><!-- End recent post item-->
-    {{ end }}
+<div class="tx section">
+  <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-12">
+          <div class="{{ .Title | lower }}-widget widget-item">
+            <h3 class="widget-title">
+              {{ .Title }}
+            </h3>
+            {{ range .Pages }}
+            <div class="d-flex flex-row bd-highlight mb-3">
+              <div class="p-2 bd-highlight">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                  <div class="p-2 bd-highlight">
+                    {{ with .Resources.GetMatch "cover.jpg" }} 
+                      {{ $thumb := .Fill "150x100 webp center" }}  
+                      <a href="{{ .RelPermalink }}" class="hover:text-blue-500"><img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="rounded-md shadow-md"></a>
+                    {{ end }}
+                  </div>
+                  <div class="p-2 bd-highlight">
+                    <p class="text-gray-500 text-sm mt-2">{{ .Date.Format "Jan 2, 2006" }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 bd-highlight">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                  <div class="p-2 bd-highlight">
+                    <h3 class="text-lg font-semibold">
+                      <a href="{{ .RelPermalink }}" class="hover:text-blue-500">{{ .Title }}</a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+      </div>
+    </div> <!-- End .row -->
   </div>
+</div>
 {{ end }}
+  
