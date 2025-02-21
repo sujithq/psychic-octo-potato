@@ -4,68 +4,56 @@
       <div class="col-lg-8">
         {{ with first 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
           {{ $latest := index . 0 }}
-          <!-- Page Title -->
+          <div class="page-title">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+              <h1 class="mb-2 mb-lg-0">{{ $latest.Title }}</h1>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="row">
+                {{ partial "blog-detail.html" (dict "page" $latest "useContent" false "useLink" true) }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
         <div class="page-title">
           <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">{{ $latest.Title }}</h1>
-            <!-- <nav class="breadcrumbs">
-              <ol>
-                <li><a href="/">Home</a></li>
-                <li class="current">{{ $latest.Title }}</li>
-              </ol>
-            </nav> -->
+            <h2 class="mb-2 mb-lg-0">Other Posts</h2>
           </div>
         </div>
-        <!-- End Page Title -->
-          {{ partial "blog-detail.html" (dict "page" $latest "useContent" false "useLink" true) }}
-          <!-- {{ template "_internal/disqus.html" $latest }} -->
-        {{ end }}
-
-                <!-- Page Title -->
-                <div class="page-title">
-                  <div class="container d-lg-flex justify-content-between align-items-center">
-                    <h2 class="mb-2 mb-lg-0">Other Posts</h2>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="row">
+              {{ $remainingPosts := after 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
+              {{ range $remainingPosts }}
+                {{ $cover := "" }}
+                {{ if .Params.cover }}
+                  {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
+                {{ else }}
+                  {{ $cover = "img/default-cover.jpg" }}
+                {{ end }}
+                <div class="col-lg-6">
+                  <a href="{{ .RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta">
+                    <span class="date">
+                      {{ with index .Params.tags 0 }}
+                        {{ . }}
+                      {{ end }}
+                    </span>
+                    <span class="mx-1">•</span>
+                    <span>{{ .Date.Format .Site.Params.dateFormat }}</span>
                   </div>
+                  <h6><a href="{{ .RelPermalink }}">{{ .Title }}</a></h6>
                 </div>
-                <!-- End Page Title -->
-                <div class="timeline-item">
-                  <div class="timeline-content">
-                    <div class="row">
-                      {{ $remainingPosts := after 1 (sort (where site.RegularPages "Section" "posts") "Date" "desc") }}
-                      {{ range $remainingPosts }}
-                        {{ $cover := "" }}
-                        {{ if .Params.cover }}
-                          {{ $cover = printf "%s/cover.jpg" .RelPermalink }}
-                        {{ else }}
-                          {{ $cover = "img/default-cover.jpg" }}
-                        {{ end }}
-                        <div class="col-lg-6">
-                          <a href="{{ .RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
-                            <div class="post-meta">
-                              <span class="date">
-                                {{ with index .Params.tags 0 }}
-                                  {{ . }}
-                                {{ end }}
-                              </span>
-                              <span class="mx-1">•</span>
-                              <span>{{ .Date.Format .Site.Params.dateFormat }}</span>
-                            </div>
-                            <h6><a href="{{ .RelPermalink }}">{{ .Title }}</a></h6>
-                        </div>
-                      {{ end}}
-                      
-                    </div>
-                  </div>
-                </div>
+              {{ end}}
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-lg-4 sidebar">
-        {{ partial "sidebar.html" . "showRecentPosts" false }}
+        {{ partial "sidebar.html" (dict "page" . "showRecentPosts" false) }}
       </div>
-    </div> <!-- End .row -->
-    <div class="row">
-      <div class="col-lg-8">
-
-    </div>          
     </div> <!-- End .row -->
   </div>
 {{ end }}

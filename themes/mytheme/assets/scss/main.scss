@@ -381,6 +381,48 @@
     color: color-mix(in srgb, var(--default-color), transparent 30%);
     margin: 10px 0 0 0;
   }
+
+
+.container-meta {
+    display: flex;
+    flex-direction: row; /* Ensures items are appended left to right */
+    gap: 10px; /* Adds space between items */
+    // border: 2px solid black;
+    padding: 10px;
+    width: fit-content;
+}
+
+.article .meta-top {
+  margin-top: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.article .meta-top {
+  margin-top: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.article .meta-top ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.article .meta-top ul li+li {
+  padding-left: 20px;
+}
+
+.article .meta-top i {
+  font-size: 16px;
+  margin-right: 8px;
+  line-height: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+
   
   @import 'custom';
   @import 'markdown';

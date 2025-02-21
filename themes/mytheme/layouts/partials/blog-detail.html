@@ -1,60 +1,57 @@
-<!-- Blog Details Section -->
-<section id="blog-details" class="blog-details section">
-    <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-      
-      <article class="article">
-        {{ if .page.Params.cover }}
-            {{ $cover := printf "%s/cover.jpg" .page.RelPermalink }}   
-            <div class="post-img">
-              {{ if .useLink }}
-                <a href="{{ .page.RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
-              {{ else }}
-                <img src="{{ $cover }}" alt="" class="img-fluid">
-              {{ end }}
-            
-            </div>        
-        {{ end }}
-        <div class="meta-top">
-          <ul>
-            <!-- <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li> -->
-            <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">{{ .page.Date | time.Format .page.Site.Params.dateFormat }}</time></li>
-            <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li> -->
-          </ul>
-        </div><!-- End meta top -->
-
-        <div class="content">
-          {{ if .useContent}}
-            {{ .page.Content }}
+  <article class="article">
+    {{ if .page.Params.cover }}
+        {{ $cover := printf "%s/cover.jpg" .page.RelPermalink }}   
+        <div class="post-img">
+          {{ if .useLink }}
+            <a href="{{ .page.RelPermalink }}"><img src="{{ $cover }}" alt="" class="img-fluid"></a>
           {{ else }}
-            {{ .page.Summary }}
+            <img src="{{ $cover }}" alt="" class="img-fluid">
           {{ end }}
-        </div><!-- End post content -->
+        
+        </div>        
+    {{ end }}
+    <div class="meta-top">
+      <ul>
+        <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">{{ .page.Date | time.Format .page.Site.Params.dateFormat }}</time></li>
+      </ul>
+    </div>
 
-        <div class="meta-bottom">
+    <div class="content">
+      {{ if .useContent}}
+        {{ .page.Content }}
+      {{ else }}
+        {{ .page.Summary }}
+      {{ end }}
+    </div>
 
+    <div class="meta-bottom">
+      <div class="tags-widget">
+        <div class="container-meta">
           <i class="bi bi-stack"></i>
           <ul class="cats">
             {{ range .page.Params.series }}
             <li><a href="{{ printf "/series/%s" . | relURL }}">{{ . }}</a></li>
           {{ end }}
           </ul>
-
+        </div>
+        <div class="container-meta">
           <i class="bi bi-folder"></i>
-          <ul class="cats">
-            {{ range .page.Params.categories }}
-            <li><a href="{{ printf "/categories/%s" . | relURL }}">{{ . }}</a></li>
-          {{ end }}
-          </ul>
-
+        <ul class="cats">
+          {{ range .page.Params.categories }}
+          <li><a href="{{ printf "/categories/%s" . | relURL }}">{{ . }}</a></li>
+        {{ end }}
+        </ul>
+        </div>
+  
+        <div class="container-meta">
           <i class="bi bi-tags"></i>
-          <ul class="tags">
-            {{ range .page.Params.tags }}
-            <li><a href="{{ printf "/tags/%s" . | relURL }}">{{ . }}</a></li>
-          {{ end }}
-          </ul>
-        </div><!-- End meta bottom -->
-
-      </article>
-
+        <ul class="tags">
+          {{ range .page.Params.tags }}
+          <li><a href="{{ printf "/tags/%s" . | relURL }}">{{ . }}</a></li>
+        {{ end }}
+        </ul>
+        </div>
+      </div>
     </div>
-  </section><!-- /Blog Details Section -->
+
+  </article>
