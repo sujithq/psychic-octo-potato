@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
   <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg">
       <!-- Page Title -->
       <div class="page-title">
         <div class="container d-lg-flex justify-content-between align-items-center">
@@ -19,9 +19,9 @@
       </div>
       {{ template "_internal/disqus.html" . }}
     </div>
-    <div class="col-lg-4 sidebar">
-      {{ partial "sidebar.html" (dict "page" . "showRecentPosts" true)  }}
-    </div>
+    <!-- <div class="col-lg-4 sidebar">
+      {{ partial "sidebar.html" (dict "page" . "showRecentPosts" true "showSearch" false)  }}
+    </div> -->
   </div>
 </div>
 {{ end }}

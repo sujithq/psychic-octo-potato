@@ -12,7 +12,14 @@
     {{ end }}
     <div class="meta-top">
       <ul>
-        <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">{{ .page.Date | time.Format .page.Site.Params.dateFormat }}</time></li>
+        {{ with .page.Params.author }}
+        {{ $author := site.GetPage (printf "authors/%s" .) }}
+        {{ $resume := site.GetPage "resume" }}
+          {{ with $resume }}
+            <li class="d-flex align-items-center"><a href="{{ $resume.RelPermalink }}">{{ partial "gravatar/avatar-params" (dict "Email" $author.Params.email "ClassName" "rounded-circle flex-shrink-0" "Size" "20") }}</a></li>
+          {{ end }}
+        {{ end}}
+        <li class="d-flex align-items-center"><time datetime="2020-01-01">{{ .page.Date | time.Format .page.Site.Params.dateFormat }}</time></li>
       </ul>
     </div>
 

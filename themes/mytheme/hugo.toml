@@ -18,6 +18,11 @@
   pageRef = '/resume'
   weight = 20
 
+[[menus.main]]
+  name = 'Search'
+  pageRef = '/search'
+  weight = 30
+
 [taxonomies]
   categories = 'categories'
   tags = 'tags'

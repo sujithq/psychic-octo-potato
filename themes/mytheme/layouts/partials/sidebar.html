@@ -23,10 +23,12 @@
       </div>  
     </div><!--/Blog Author Widget -->
 
-    <!-- Search Widget -->
-    <div class="search-widget widget-item">
-      {{ partial "search.html" .page }}
-    </div><!--/Search Widget -->
+    {{ if .showSearch }}
+      <!-- Search Widget -->
+      <div class="search-widget widget-item">
+        {{ partial "search.html" .page }}
+      </div><!--/Search Widget -->
+    {{ end }}
 
     {{ if .showRecentPosts }}
 
