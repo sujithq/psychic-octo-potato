@@ -12,9 +12,7 @@ layout = 'accomplishment'
   certificate_url = "https://learn.microsoft.com/api/credentials/share/en-us/SujithQuintelier/BAFE8995F6D16FE0?sharingId=B2D5696D597C46D3"
   date_start = "2024-06-07"
   date_end = ""
-  description = """
-  Learners demonstrate the ability to assess and migrate SQL Server workloads to Azure SQL Database
-  """
+  description = "Learners demonstrate the ability to assess and migrate SQL Server workloads to Azure SQL Database"
 
 [[item]]
   organization = "Microsoft"
@@ -24,9 +22,7 @@ layout = 'accomplishment'
   certificate_url = ""
   date_start = "2024-06-21"
   date_end = ""
-  description = """
-  Learners demonstrate fundamental AI concepts related to the development of software and services of Microsoft Azure to create AI solutions.
-  """
+  description = "Learners demonstrate fundamental AI concepts related to the development of software and services of Microsoft Azure to create AI solutions."
 
 [[item]]
   organization = "Microsoft"

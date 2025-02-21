@@ -33,7 +33,9 @@
             {{ with .Params.author }}
             {{ $author := site.GetPage (printf "authors/%s" .) }}
             {{ with $author }}
+            <div class="markdown-content">
               {{ .Content }}
+            </div>
             {{ end }}
           {{ end }}
           </div>
@@ -109,13 +111,13 @@
               {{ if eq .Title "Experiences" }}
                   {{ range sort .Params.item "date_start" "desc"}}
           <div class="resume-item">
-              <h4>{{ .title }}</h4>
-              <h5 class="organization">
+              <h3>{{ .title }}</h3>
+              <h4 class="organization">
                   <a href="{{ .company_url }}" target="_blank">{{ .company }}</a>
-              </h5>
-              <p class="date">
+              </h4>
+              <h5 class="date">
                 {{ .date_start | time.Format $global.Site.Params.dateFormat  }} - {{ if .date_end }}{{ .date_end | time.Format $global.Site.Params.dateFormat  }}{{ else }}Present{{ end }}<span class="middot-divider">.</span>{{.location}}
-              </p>
+              </h5>
               <p class="description markdown-content">{{ .description | markdownify }}</p>
           </div><!-- /Resume Item -->
           {{ end }}
@@ -155,9 +157,9 @@
                         <h4>
                             <a href="{{ .organization_url }}" target="_blank">{{ .organization }}</a>
                         </h4>
-                        <p class="date">
+                        <h5 class="date">
                           {{ .date_start | time.Format $global.Site.Params.dateFormat  }} - {{ if .date_end }}{{ .date_end | time.Format $global.Site.Params.dateFormat  }}{{ else }}Present{{ end }}
-                        </p>
+                        </h5>
                         <p class="description">{{ .description }}</p>
                         <div class="links">
                             <a class="btn" href="{{ .url }}" target="_blank">More Info</a>

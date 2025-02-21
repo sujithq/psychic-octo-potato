@@ -1,11 +1,11 @@
 /* Wrap markdownify content for easier styling */
 .markdown-content {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.75;
     color: var(--default-color);
-    max-width: 800px;
-    margin: auto;
-    padding: 20px 0;
+    max-width: auto;
+    // margin: auto;
+    padding: 0 20px 0 0;
   }
   
   /* Headings */

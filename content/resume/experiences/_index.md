@@ -11,8 +11,7 @@ layout = 'experience'
   location = "Antwerp"
   date_start = "2023-06-12"
   date_end = ""
-  description = """
-Authority, Focus and Values. These principles guide every decision made by both management and staff. Authority means becoming the best in our field, individually and as a company. It’s an audacious goal that keeps us striving and fighting. That’s why we only hire people who are driven by the same mission!
+  description = """Authority, Focus and Values. These principles guide every decision made by both management and staff. Authority means becoming the best in our field, individually and as a company. It’s an audacious goal that keeps us striving and fighting. That’s why we only hire people who are driven by the same mission!
 
 Helping clients with:
 
@@ -33,8 +32,7 @@ Helping clients with:
   location = "Mechelen"
   date_start = "2021-01-18"
   date_end = "2023-06-09"
-  description = """
-Ordina AHEAD OF CHANGE
+  description = """Ordina AHEAD OF CHANGE
 
 Rapid technological developments are profoundly changing the world in which we live, work and communicate. This poses a challenge to our ability to adapt, but it also offers a wealth of opportunities. IT applications are helping solve countless business and social problems.
 
@@ -79,8 +77,7 @@ Responsibilities include:
   location = "Kontich"
   date_start = "2019-07-01"
   date_end = "2021-01-18"
-  description = """
-Arxus, founded in 2008, is a Managed Services Provider made up of 80+ cloud enthusiasts with unique cloud expertise and sector specific knowledge.
+  description = """Arxus, founded in 2008, is a Managed Services Provider made up of 80+ cloud enthusiasts with unique cloud expertise and sector specific knowledge.
 
 From our headquarters in Kontich, our certified team provides tailored Azure, Office 365, and Microsoft 365 solutions, changing the complex challenge of modernising your infrastructure into an opportunity to create a truly future-proof business with managed public and private cloud solutions.
 
@@ -126,9 +123,7 @@ Responsibilities include:
   location = "Mechelen"
   date_start = "2012-11-01"
   date_end = "2019-06-30"
-  description = """
-
-* Senior Azure Consultant
+  description = """* Senior Azure Consultant
   * RFP support
   * TCO assessments
   * Application architecture (re)design
@@ -149,9 +144,7 @@ Responsibilities include:
   location = "Mechelen"
   date_start = "2009-12-01"
   date_end = "2012-10-31"
-  description = """ 
-  Consultancy - .NET - Windows Forms - ASP.NET - WPF - WCF - EF - Silverlight - ADO.NET - Windows Phone - SQL Server - Oracle - Enterprise Library
-  """
+  description = "Consultancy - .NET - Windows Forms - ASP.NET - WPF - WCF - EF - Silverlight - ADO.NET - Windows Phone - SQL Server - Oracle - Enterprise Library"
 
 [[item]]
   title = "Software Developer"
@@ -160,9 +153,7 @@ Responsibilities include:
   location = "Boortmeerbeek"
   date_start = "2006-12-01"
   date_end = "2009-12-31"
-  description = """ 
-  .NET - Windows Forms - ASP.NET - ADO.NET - SQL Server - Lucene - Solr
-  """  
+  description = ".NET - Windows Forms - ASP.NET - ADO.NET - SQL Server - Lucene - Solr"  
 
 [[item]]
   title = "Software Developer"
@@ -171,9 +162,7 @@ Responsibilities include:
   location = "Kontich"
   date_start = "2006-08-01"
   date_end = "2006-11-30"
-  description = """ 
-  Consultancy - VB6 - ASP - SQL Server
-  """  
+  description = "Consultancy - VB6 - ASP - SQL Server"  
 
 [[item]]
   title = "Software Developer"
@@ -182,9 +171,7 @@ Responsibilities include:
   location = "Zwijnaarde"
   date_start = "2004-04-01"
   date_end = "2006-07-31"
-  description = """ 
-  JAVA - PL-SQL
-  """
+  description = "Java - PL-SQL"
 
 [[item]]
   title = "Software Developer"
@@ -193,9 +180,7 @@ Responsibilities include:
   location = "Lokeren"
   date_start = "2002-10-01"
   date_end = "2004-03-31"
-  description = """ 
-  Magic - eDeveloper - System Engineer
-  """  
+  description = "Magic - eDeveloper - System Engineer"  
 
 [[item]]
   title = "Software Developer"
@@ -204,7 +189,5 @@ Responsibilities include:
   location = "Schelle"
   date_start = "2000-07-01"
   date_end = "2002-09-30"
-  description = """ 
-  Consultancy - VB6 - SQL Server - Crystal Reports
-  """  
+  description = "Consultancy - VB6 - SQL Server - Crystal Reports"  
 +++
